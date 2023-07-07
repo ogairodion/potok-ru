@@ -8,4 +8,8 @@
         color: $white;
         background: $blue_hover;
     }
+
+    &--active {
+        background: $blue_hover;
+    }
 }

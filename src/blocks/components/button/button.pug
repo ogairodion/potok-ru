@@ -13,24 +13,24 @@ mixin button(element)
                 a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
                     - if (element.icon_left)
                         .button__icon
-                            +svgMono(element.icon_left)
+                            i(data-feather=element.icon_left)
                     - if (element.text)
                         .button__text= element.text
                     - if (element.icon_right)
                         .button__icon
-                            +svgMono(element.icon_right)
+                            i(data-feather=element.icon_right)
             - else
                 button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
                     - if (element.icon_left)
                         .button__icon
-                            +svgMono(element.icon_left)
+                            i(data-feather=element.icon_left)
                     - if (element.text)
                         .button__text= element.text
                     - if (element.icon_right)
                         .button__icon
-                            +svgMono(element.icon_right)
+                            i(data-feather=element.icon_right)
     
     - else 
         button.button(class=type)
             .button__icon   
-                +svgMono(element.icon)
+                i(data-feather=element.icon)

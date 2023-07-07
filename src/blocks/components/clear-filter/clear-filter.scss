@@ -1,0 +1,46 @@
+.clear {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    cursor: pointer;
+    border: 1px solid $black_general;
+    border-radius: 4px;
+    padding: 4px 32px;
+
+    @media screen and (min-width: 991px) {
+        border-radius: 4px;
+        border: none;
+        padding: 0;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 991px) {
+            border: 1px solid $black_general;
+            border-radius: 4px;
+            padding: 8px;
+        }
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;   
+
+        @media screen and (min-width: 991px) {
+            width: 20px;
+            height: 20px;   
+        }
+    }
+
+    &__text {
+        display: block;
+        margin-right: 3px;
+        
+        @media screen and (min-width: 991px) {
+            display: none;
+        }
+    }
+}
