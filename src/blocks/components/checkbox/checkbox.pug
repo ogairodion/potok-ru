@@ -1,0 +1,8 @@
+mixin checkbox(element)
+    .checkbox
+        input.checkbox__input(type="checkbox" value=element.value)
+        .checkbox__btn
+            .checkbox__btn-icon
+                i(data-feather="check")
+        - if (element.text)
+            .checkbox__text(class="font-small-body")= element.text

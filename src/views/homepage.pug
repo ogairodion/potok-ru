@@ -7,11 +7,20 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
-    include ../blocks/components/clear-filter/clear-filter.pug
+    include ../blocks/components/checkbox/checkbox.pug
 
     .main__test
       .main__test-item
-        +clear
+        +checkbox({
+          value: 'value',
+          text: 'text label',
+        })
+
+      .main__test-item
+        +checkbox({
+          value: 'value',
+        })
+
 
 
 block scripts
