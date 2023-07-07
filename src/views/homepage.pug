@@ -7,18 +7,30 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
+    include ../blocks/components/radio-button/radio-button.pug
     include ../blocks/components/checkbox/checkbox.pug
 
     .main__test
       .main__test-item
-        +checkbox({
-          value: 'value',
+        +radio-button({
           text: 'text label',
+          name: 'radio',
+          disabled: true,
+          checked: true,
+        })
+
+      .main__test-item
+        +radio-button({
+          text: 'text label',
+          name: 'radio',
+          disabled: true,
         })
 
       .main__test-item
         +checkbox({
-          value: 'value',
+          text: 'text label',
+          checked: true,
+          disabled: true,
         })
 
 

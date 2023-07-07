@@ -1,6 +1,9 @@
 mixin checkbox(element)
+    - var disabled = element.disabled 
+    - var checked = element.checked
+
     .checkbox
-        input.checkbox__input(type="checkbox" value=element.value)
+        input.checkbox__input(type="checkbox" value=element.value disabled=disabled checked=checked)
         .checkbox__btn
             .checkbox__btn-icon
                 i(data-feather="check")

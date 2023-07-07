@@ -1,0 +1,9 @@
+mixin radio-button(element)
+    - var disabled = element.disabled 
+    - var checked = element.checked
+
+    .radio-button
+        input.radio-button__input(type="radio" name=element.name disabled=element.disabled checked=element.checked)
+        .radio-button__btn
+        - if (element.text)
+            .radio-button__text= element.text

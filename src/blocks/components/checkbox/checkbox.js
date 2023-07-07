@@ -4,12 +4,10 @@ checkboxes.forEach((checkbox) => {
     const input = checkbox.querySelector('input');
 
     checkbox.addEventListener('click', (e) => {
-        if (e.target.checked === true) {
-            e.currentTarget.classList.add('checked');
-        } else {
-            e.currentTarget.classList.remove('checked');
-        }
+        getChecked(checkbox);
     });
+
+    getChecked(checkbox);
 
     if (input.disabled === true) {
         checkbox.classList.add('disabled');
@@ -17,3 +15,13 @@ checkboxes.forEach((checkbox) => {
         checkbox.classList.remove('disabled');
     }
 });
+
+function getChecked(checkbox) {
+    const input = checkbox.querySelector('input');
+
+    if (input.checked === true) {
+        checkbox.classList.add('checked');
+    } else {
+        checkbox.classList.remove('checked');
+    }
+}

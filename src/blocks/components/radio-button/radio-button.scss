@@ -1,4 +1,4 @@
-.checkbox {
+.radio-button {
     position: relative;
     display: flex;
     align-items: center;
@@ -14,21 +14,19 @@
         opacity: 0;
         cursor: pointer;
 
-        &:checked ~ .checkbox__btn > .checkbox__btn-icon {
+        &:checked ~ .radio-button__btn:after {
             opacity: 1
         }
 
-        &:checked ~ .checkbox__btn {
+        &:checked ~ .radio-button__btn {
             border: 1px solid $blue_hover;
         }
 
-        &:disabled ~ .checkbox__btn > .checkbox__btn-icon {
-            svg {
-                stroke: $grey_disabled;
-            }
+        &:disabled ~ .radio-button__btn:after {
+            background: $grey_disabled;
         }
 
-        &:disabled ~ .checkbox__btn {
+        &:disabled ~ .radio-button__btn {
             border: 1px solid $grey_disabled;
         }
     }
@@ -40,22 +38,21 @@
         justify-content: center;
         width: 24px;
         height: 24px;
-        border-radius: 4px;
+        border-radius: 100%;
         border: 1px solid $grey_disabled;
         padding: 7px 5px;
 
-        &-icon {
+        &:after {
             @include tr('all');
+            content: '';
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 14px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
             opacity: 0;
-
-            svg {
-                stroke: $blue_hover;
-            }
+            background: $blue_hover;
         }
     }
 
@@ -65,7 +62,7 @@
     }
 
     &:hover {
-        .checkbox {
+        .radio-button {
             &__btn {
                 border: 1px solid $blue_hover;
             }
@@ -74,14 +71,12 @@
 
     &.checked {
         &:hover {
-            .checkbox {
+            .radio-button {
                 &__btn {
                     background: $blue_hover;
 
-                    &-icon {
-                        svg {
-                            stroke: $white;
-                        }
+                    &:after {
+                        stroke: $white;
                     }
                 }
             }
@@ -91,14 +86,14 @@
     &.disabled {
         pointer-events: none;
 
-        .checkbox {
+        .radio-button {
             &__text {
                 color: $grey_disabled;
             }
         }
 
         &.checked {
-            .checkbox {
+            .radio-button {
                 &__text {
                     color: $black_general;
                 }
