@@ -1,0 +1,9 @@
+mixin card-program(element)
+    a.card-program(href=element.href)
+        .card-program__top
+            .card-program__title.font-accent.font-uppercase= element.title
+            .card-program__icon 
+                +svgMono('card-program')
+        .card-program__text.font-p-1= element.text
+        .card-program__price.font-numbers= element.price
+        .card-program__date.font-small= element.date

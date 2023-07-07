@@ -7,6 +7,16 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
+    include ../blocks/components/card/card-program.pug
+
+    .main__test
+      .main__test-item
+        +card-program({
+          title: 'rti',
+          text: 'Программа для расчёта потерь тепла и инфильтрации помещениями зданий (теплопотерь), энергопаспорт здания',
+          price: 'от 45 000 руб',
+          date: 'Обновлено: 18.01.2023',
+        })
 
 block scripts
   script(defer src="js/vendor.js")

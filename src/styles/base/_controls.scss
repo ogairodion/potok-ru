@@ -75,7 +75,16 @@
     line-height: 1;
   }
 
+  &-numbers {
+    font-size: 21px;
+    line-height: 1;
+  }
+
   &-b {
     font-weight: 900;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
   }
 }

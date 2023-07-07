@@ -1,0 +1,51 @@
+.card {
+    &-program {
+        @include tr('all');
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        padding: 24px;
+    
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        &__icon {
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        &__text {
+            color: $grey_disabled;
+            margin-bottom: 24px;
+        }
+
+        &__date {
+            color: $grey_disabled;
+            font-weight: 600;
+        }
+
+        &__price {
+            color: $blue_general;
+            margin-bottom: 8px;
+        }
+
+        &:hover, &:active {
+            color: $white;
+            background: $blue_general;
+
+            svg {
+                fill: $white;
+            }
+
+            .card-program {
+                &__text, &__date, &__price {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

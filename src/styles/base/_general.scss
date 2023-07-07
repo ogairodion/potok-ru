@@ -139,6 +139,20 @@ img {
             padding: 0; 
         }
     }
+
+    &-footer {
+        position: relative;
+        z-index: z("l-default");
+        width: 100%;
+        max-width: 1195px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 10px; 
+
+        @media screen and (min-width: 1160px) {
+            padding: 0; 
+        }
+    }
 }
 
 input, textarea {
