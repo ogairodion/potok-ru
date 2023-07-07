@@ -154,6 +154,14 @@ input, textarea {
     overflow-y: hidden !important;
 }
 
+.main {
+    &__test {
+        &-item {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 @keyframes show {
     from {
         opacity: 0;

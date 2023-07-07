@@ -8,18 +8,70 @@ block variables
 block content
     include ../blocks/modules/header/header.pug
     include ../blocks/components/button/button.pug
-    +button({
-      type: 'solid',
-      size: 'default',
-      icon_left: 'activity',
-      icon_right: 'bell',
-      font_size: 'menu',
-      font_weight: 'b',
-      text: 'Text',
-      color: 'blue-general',
-      disabled: 'disabled',
-      label: 'Ошибка',
-    })
+
+    .main__test
+      .main__test-item
+        +button({
+          type: 'solid',
+          size: 'default',
+          icon_left: 'activity',
+          icon_right: 'bell',
+          font_size: 'menu',
+          font_weight: 'b',
+          text: 'Text',
+          color: 'blue-general',
+          disabled: 'disabled',
+          label: 'Ошибка',
+        })
+
+      .main__test-item
+        +button({
+          type: 'arrow',
+          icon: 'chevron-right',
+        })
+      
+      .main__test-item
+        +button({
+          type: 'solid',
+          size: 'small',
+          icon_left: 'activity',
+          icon_right: 'bell',
+          font_size: 'menu',
+          font_weight: 'b',
+          text: 'Text',
+          color: 'blue-general',
+          disabled: 'disabled',
+        })
+
+      .main__test-item
+        +button({
+          type: 'outline',
+          icon_left: 'activity',
+          icon_right: 'bell',
+          font_size: 'menu',
+          font_weight: 'b',
+          text: 'Text',
+          disabled: 'disabled',
+        })
+
+      .main__test-item
+        +button({
+          type: 'text',
+          icon_left: 'activity',
+          icon_right: 'bell',
+          font_size: 'menu',
+          text: 'Text',
+        })
+
+      .main__test-item
+        +button({
+          type: 'text',
+          icon_left: 'activity',
+          icon_right: 'bell',
+          font_size: 'small',
+          text: 'Text',
+        })
+
 
 block scripts
   script(defer src="js/vendor.js")

@@ -13,6 +13,10 @@
         padding: 22px 32px;
     }
 
+    svg {
+        @include tr('all');
+    }
+
     &-blue-general {
         background: $blue_general;
         color: $white;
@@ -53,5 +57,94 @@
         font-weight: 600;
         line-height: 140%;
         margin-bottom: 8px;
+    }
+
+    &-arrow {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        background: $white;
+        box-shadow: 0px 0px 35px 0px rgba(0, 120, 191, 0.08);
+
+        svg {
+            fill: $blue_general;
+        }
+
+        &:hover {
+            background: $black_general;
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        .button {
+            &__icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    &-small {
+        border-radius: 4px;
+        padding: 10px 24px;
+    }
+
+    &-outline {
+        border: 1px solid $black_general;
+        padding: 22px 32px;
+    }
+
+    &-text {
+        position: relative;
+        color: $blue_general;
+        padding: 2px 1px;
+
+        svg {
+            fill: $blue_general;
+        }
+
+        &:after {
+            @include tr('all');
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: $blue_hover;
+        }
+        
+        &:hover, &:active {
+            color: $blue_hover;
+
+            &:after {
+                width: 100%;
+            }
+        
+            svg {
+                fill: $blue_hover;
+            }
+        }
+
+        .button {
+            &__icon {
+                &:last-child {
+                    margin-left: 4px;
+                }
+        
+                &:first-child {
+                    margin-right: 4px;
+                }
+            }
+        }
+
+        &.font-small {
+            &:after {
+                display: none;
+            }
+        }
     }
 }

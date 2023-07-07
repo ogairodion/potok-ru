@@ -1,30 +1,36 @@
 mixin button(element)
-    - var color = 'button-' + element.color;
-    - var type = 'button-' + element.type;
-    - var size = 'button-' + element.size;
-    - var font_size = 'font-' + element.font_size;
-    - var font_weight = 'font-' + element.font_weight;
+    - var color = element.color ? 'button-' + element.color : '';
+    - var type = element.type ? 'button-' + element.type : '';
+    - var size = element.size ? 'button-' + element.size : '';
+    - var font_size = element.font_size ? 'font-' + element.font_size : '';
+    - var font_weight = element.font_weight ? 'font-' + element.font_weight : '';
     
-    .button
-        - if (element.label)
-            label.button__label= element.label
-        - if (element.tag === 'link')
-            a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
-                - if (element.icon_left)
-                    .button__icon
-                        +svgMono(element.icon_left)
-                - if (element.text)
-                    .button__text= element.text
-                - if (element.icon_right)
-                    .button__icon
-                        +svgMono(element.icon_right)
-        - else
-            button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
-                - if (element.icon_left)
-                    .button__icon
-                        +svgMono(element.icon_left)
-                - if (element.text)
-                    .button__text= element.text
-                - if (element.icon_right)
-                    .button__icon
-                        +svgMono(element.icon_right)
+    - if (element.type !== 'arrow')
+        .button
+            - if (element.label)
+                label.button__label= element.label
+            - if (element.tag === 'link')
+                a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
+                    - if (element.icon_left)
+                        .button__icon
+                            +svgMono(element.icon_left)
+                    - if (element.text)
+                        .button__text= element.text
+                    - if (element.icon_right)
+                        .button__icon
+                            +svgMono(element.icon_right)
+            - else
+                button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
+                    - if (element.icon_left)
+                        .button__icon
+                            +svgMono(element.icon_left)
+                    - if (element.text)
+                        .button__text= element.text
+                    - if (element.icon_right)
+                        .button__icon
+                            +svgMono(element.icon_right)
+    
+    - else 
+        button.button(class=type)
+            .button__icon   
+                +svgMono(element.icon)
