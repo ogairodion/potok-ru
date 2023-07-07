@@ -22,7 +22,7 @@
         color: $white;
 
         svg {
-            fill: $white;
+            stroke: $white;
         }
 
         &:hover, &:active {
@@ -48,7 +48,7 @@
         cursor: not-allowed;
 
         svg {
-            fill: $grey_disabled;
+            stroke: $grey_disabled;
         }
     }
 
@@ -103,7 +103,7 @@
         padding: 2px 1px;
 
         svg {
-            fill: $blue_general;
+            stroke: $blue_general;
         }
 
         &:after {
@@ -125,7 +125,7 @@
             }
         
             svg {
-                fill: $blue_hover;
+                stroke: $blue_hover;
             }
         }
 

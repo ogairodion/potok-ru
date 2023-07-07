@@ -1,0 +1,5 @@
+include header-menu-data.pug
+
+.header-menu
+    each header_menu_item in header_menu
+        a.header-menu__item.font-menu(href=header_menu_item.href)= header_menu_item.text

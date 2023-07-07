@@ -1,0 +1,23 @@
+include ../../../blocks/components/button/button.pug
+
+header.header
+    .header__top
+        .l-default 
+            .header__top-wrapper 
+                .header__logo 
+                    +svgMono('logo')
+                .header__info
+                    a.header__phone.font-menu(href="tel:+74955653839") +7 (495) 565-38-39
+                    a.header__mail.font-menu(href="mailto:potok@potok.ru") potok@potok.ru
+                    +button({
+                        text: 'Личный кабинет',
+                        icon_right: 'log-in',
+                        color: 'blue-general',
+                        size: 'small',
+                        font_size: 'menu',
+                    })
+                .header__burger  
+                    i(data-feather="menu")
+    .header__bottom 
+        .l-default 
+            include ../../../blocks/components/header-menu/header-menu.pug

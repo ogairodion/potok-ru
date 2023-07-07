@@ -1,0 +1,53 @@
+.header {
+    &__logo {
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    &__top {
+        padding: 23px 0;
+
+        @media (min-width: 1200px) {
+            border-bottom: 1px solid rgba($grey_disabled, .1);
+            padding: 16px 0;
+        }
+
+        &-wrapper  {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__phone, &__mail {
+        margin-right: 32px;
+
+        @media (min-width: 1200px) {
+            margin-right: 64px;
+        }
+    }
+
+    &__bottom {
+        padding: 25px 0;
+    }
+
+    &__burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        padding: 6px 2px;
+        margin-left: auto;
+        cursor: pointer;
+
+        @media (min-width: 960px) {
+            display: none;
+        }
+    }
+}
