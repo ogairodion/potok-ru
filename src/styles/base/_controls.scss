@@ -1,0 +1,76 @@
+.font {
+  &-h1 {
+    font-size: 64px;
+    line-height: 120%;
+  }
+
+  &-h2 {
+    font-size: 42px;
+    line-height: 120%;
+  }
+
+  &-h3 {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  &-h4 {
+    font-size: 17px;
+    line-height: 120%;
+  }
+
+  &-p-1 {
+    font-size: 17px;
+    line-height: 140%;
+  }
+
+  &-p-2 {
+    font-size: 17px;
+    line-height: 160%;
+  }
+
+  &-p-3 {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &-small {
+    font-size: 13px;
+    line-height: 120%;
+  }
+
+  &-extra-small {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  &-caption {
+    font-size: 13px;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  &-accent {
+    font-size: 36px;
+    line-height: 140%;
+  }
+
+  &-menu {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &-form {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &-pagination {
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  &-b {
+    font-weight: 900;
+  }
+}

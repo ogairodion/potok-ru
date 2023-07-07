@@ -1,0 +1,57 @@
+.button {
+    @include tr('all');
+    max-width: fit-content;
+    cursor: pointer;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &-default {
+        padding: 22px 32px;
+    }
+
+    &-blue-general {
+        background: $blue_general;
+        color: $white;
+
+        svg {
+            fill: $white;
+        }
+
+        &:hover, &:active {
+            background: $black_general;
+        }
+    }
+
+    &__icon {
+        font-size: 24px;
+
+        &:last-child {
+            margin-left: 8px;
+        }
+
+        &:first-child {
+            margin-right: 8px;
+        }
+    }
+
+    &:disabled {
+        background: $grey;
+        color: $grey_disabled;
+        cursor: not-allowed;
+
+        svg {
+            fill: $grey_disabled;
+        }
+    }
+
+    &__label {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 140%;
+        margin-bottom: 8px;
+    }
+}

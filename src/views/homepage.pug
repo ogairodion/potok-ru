@@ -1,0 +1,26 @@
+extends layouts/default
+include helpers/_mixins-default
+include helpers/_mixins-custom
+
+block variables
+  - const title = "Поток"
+
+block content
+    include ../blocks/modules/header/header.pug
+    include ../blocks/components/button/button.pug
+    +button({
+      type: 'solid',
+      size: 'default',
+      icon_left: 'activity',
+      icon_right: 'bell',
+      font_size: 'menu',
+      font_weight: 'b',
+      text: 'Text',
+      color: 'blue-general',
+      disabled: 'disabled',
+      label: 'Ошибка',
+    })
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")
