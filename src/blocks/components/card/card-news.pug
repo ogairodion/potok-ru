@@ -1,0 +1,15 @@
+mixin card-news(element)
+    .card-news
+        .card-news__wrapper
+            .card-news__date.font-small= element.date
+            .card-news__title.font-accent= element.title
+            .card-news__content
+                - if (element.items)
+                    each element_item in element.items
+                        .card-news__item
+                            .card-news__caption.font-h3= element_item.caption
+                            - if (element_item.list)
+                                ul.card-news__list
+                                    each li in element_item.list
+                                        li.font-p-2= li
+            .card-news__more.font-menu Подробнее
