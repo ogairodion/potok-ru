@@ -1,0 +1,37 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+
+    &__label {
+        color: rgba($black_dark, .6);
+        margin-bottom: 8px;
+
+        span {
+            color: $red;
+        }
+    }
+
+    input {
+        min-height: 53px;
+        border: 1px solid $grey_disabled;
+        border-radius: 4px;
+        background: none;
+        padding: 0 24px;
+    } 
+
+    textarea {
+        min-height: 158px;
+        border: 1px solid $grey_disabled;
+        border-radius: 4px;
+        background: none;
+        padding: 16px 24px;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        color: rgba($black_dark, .6);
+        margin-top: 11px;
+    }
+}

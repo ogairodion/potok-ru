@@ -1,0 +1,13 @@
+mixin input(element)
+    - if (element.type !== 'textarea')
+        .input(data-required=element.required)
+            label.input__label.font-small= element.placeholder
+            input.font-form(type=element.type placeholder=element.placeholder required=element.required name=element.name)
+    - else 
+        .input(data-required=element.required)
+            label.input__label.font-small= element.placeholder
+            textarea.font-form(type=element.type placeholder=element.placeholder required=element.required max=element.max name=element.name)
+            .input__count.font-small
+                .input__count-real 0
+                span / 
+                .input__count-max= element.max

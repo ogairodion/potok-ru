@@ -7,14 +7,26 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
-    include ../blocks/components/accordeon/accordeon-data.pug
-    include ../blocks/components/accordeon/accordeon.pug
+    include ../blocks/components/input/input.pug
 
-    .main__test
-      .main__test-item
-        +accordeon({
-          element: accordeon_table,
-        })
+    main.main
+      .l-default
+        .main__test
+          .main__test-item
+            +input({
+              type: 'text',
+              placeholder: 'Placeholder text',
+              required: true,
+              name: 'name',
+            })
+
+        .main__test-item
+            +input({
+              type: 'textarea',
+              placeholder: 'Введите имя',
+              required: true,
+              max: '10',
+            })
 
 block scripts
   script(defer src="js/vendor.js")
