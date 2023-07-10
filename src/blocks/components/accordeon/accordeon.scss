@@ -1,0 +1,144 @@
+.accordeon {
+    padding: 20px;
+
+    &__item {
+        padding: 15px 20px;
+        border-bottom: 1px solid $grey;
+        margin-right: 20px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &__arrow {
+        @include tr('all');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 32px;
+
+        svg {
+            width: 100%;
+            stroke: $black_general;
+        }
+    }
+
+    &__title {
+        @include tr('all');
+    }
+
+    &__content {
+        @include tr('all');
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    &__table {
+        @include tr('all');
+        width: 100%;
+
+        &-row {
+            display: flex;
+            width: 100%;
+            min-height: 130px;
+            padding-top: 24px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba($grey_disabled, 0.2);
+                padding-bottom: 48px;
+            }
+        }
+
+        &-item {
+            &:first-child {
+                max-width: 300px;
+                flex: 1 auto;
+            }
+
+            &:nth-child(2) {
+                width: 300px;
+                margin-left: auto;
+                margin-right: 64px;
+            }
+
+            &:nth-child(3) {
+                max-width: 153px;
+                min-width: 153px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &-name {
+            width: 300px;
+            font-weight: 600;
+        }
+
+        &-format {
+            @include tr('all');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: $blue_general;
+            color: $white;
+            margin-right: 16px;
+        }
+
+        &-doc {
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+        }
+    }
+
+    &__item {        
+        &.open {
+            .accordeon {
+                &__content {
+                    height: auto;
+                    opacity: 1;
+                    padding-top: 20px;
+                }
+
+                &__title {
+                    color: $blue_general;
+                }
+
+                &__arrow {
+                    transform: rotate(180deg);
+
+                    svg {
+                        stroke: $blue_general;
+                    }
+                }
+
+                &__table {
+                    padding-bottom: 48px;
+                }
+            }
+        }
+
+        &:hover {
+            .accordeon {
+                &__title {
+                    color: $blue_hover;
+                }
+    
+                &__arrow {
+                    svg {
+                        stroke: $blue_general;
+                    }
+                }
+            }
+        }
+    }
+}

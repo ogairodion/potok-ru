@@ -1,0 +1,38 @@
+mixin accordeon(element)
+    .accordeon
+        each accordeon_item in element
+            each item in accordeon_item
+                .accordeon__item.open
+                    .accordeon__top
+                        .accordeon__title.font-h3= item.title
+                        .accordeon__arrow   
+                            i(data-feather="chevron-down")
+                    - if (item.content)
+                        .accordeon__content.font-p-2= item.content
+                    - if (item.table)
+                        .accordeon__content
+                            .accordeon__table
+                                each table_item in item.table
+                                    .accordeon__table-row
+                                        - if (table_item.name)
+                                            .accordeon__table-name.accordeon__table-item.font-h4.font-uppercase= table_item.name
+                                        - if (table_item.address || table_item.fio || table_item.weight)
+                                            .accordeon__table-item
+                                                - if (table_item.address)
+                                                    div.font-p-1= table_item.address
+                                                - if (table_item.fio)
+                                                    div.font-p-1= table_item.fio
+                                                - if (table_item.weight)
+                                                    .accordeon__table-doc
+                                                        .accordeon__table-format.font-p-1= table_item.format
+                                                        .accordeon__table-weight.font-p-1= table_item.weight
+                                            - if (table_item.info)
+                                                .accordeon__table-item
+                                                    each table_info_item in table_item.info
+                                                        div.font-p-1
+                                                            span= table_info_item.phone
+                                                            span= table_info_item.mail
+                                                            span= table_info_item.site
+                                            - else 
+                                                .accordeon__table-item
+                                                

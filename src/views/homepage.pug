@@ -7,19 +7,14 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
-    include ../blocks/components/card/card-data.pug
-    include ../blocks/components/card/card-document.pug
+    include ../blocks/components/accordeon/accordeon-data.pug
+    include ../blocks/components/accordeon/accordeon.pug
 
     .main__test
-      each document_card in document_cards
-        .main__test-item
-          +card-document({
-            title: document_card.title,
-            name: document_card.name,
-            format: document_card.format,
-            weight: document_card.weight,
-            href: document_card.href,
-          })
+      .main__test-item
+        +accordeon({
+          element: accordeon_table,
+        })
 
 block scripts
   script(defer src="js/vendor.js")
