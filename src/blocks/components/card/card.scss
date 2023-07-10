@@ -106,4 +106,47 @@
             margin-top: 24px;
         }
     }
+
+    &-reviews {
+        padding: 48px;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 24px;
+        }   
+
+        &__photo {
+            margin-right: 16px;
+        }
+
+        &__name {
+            margin-bottom: 6px;
+        }
+
+        &__position {
+            font-weight: 600;
+            color: $grey_disabled;
+        }
+
+        &__wrapper {
+            max-width: 936px;
+        }
+
+        &__content {
+            height: 93px;
+            overflow: hidden;
+
+            &.open {
+                height: auto;
+            }
+        }
+
+        &__more {
+            cursor: pointer;
+            color: $blue_general;
+            margin-top: 24px;
+        }
+    }
 }

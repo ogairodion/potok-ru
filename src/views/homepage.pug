@@ -8,16 +8,16 @@ block variables
 block content
     include ../blocks/modules/header/header.pug
     include ../blocks/components/card/card-data.pug
-    include ../blocks/components/card/card-news.pug
+    include ../blocks/components/card/card-reviews.pug
 
     .main__test
-      each news_card in news_cards
+      each reviews_card in reviews_cards
         .main__test-item
-          +card-news({
-            date: news_card.date,
-            title: news_card.title,
-            items: news_card.items,
-            list: news_card.list,
+          +card-reviews({
+            name: reviews_card.name,
+            position: reviews_card.position,
+            content: reviews_card.content,
+            photo: reviews_card.photo,
           })
 
 block scripts
