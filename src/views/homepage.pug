@@ -11,22 +11,24 @@ block content
 
     main.main
       .l-default
-        .main__test
-          .main__test-item
-            +input({
-              type: 'text',
-              placeholder: 'Placeholder text',
-              required: true,
-              name: 'name',
-            })
+        form
+          .main__test
+            .main__test-item
+              +input({
+                type: 'text',
+                placeholder: 'Placeholder text *',
+                required_text: 'Placeholder text <span>*</span>',
+                required: true,
+                name: 'name',
+              })
 
-        .main__test-item
-            +input({
-              type: 'textarea',
-              placeholder: 'Введите имя',
-              required: true,
-              max: '10',
-            })
+          .main__test-item
+              +input({
+                type: 'textarea',
+                placeholder: 'Введите имя',
+                name: 'message',
+                max: '3000',
+              })
 
 block scripts
   script(defer src="js/vendor.js")

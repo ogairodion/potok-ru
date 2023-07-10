@@ -1,6 +1,7 @@
-import Inputmask from "inputmask";
+import $ from 'jquery';
+import Inputmask from 'inputmask';
 // eslint-disable-next-line no-unused-vars
-import validate from "jquery-validation";
+import validate from 'jquery-validation';
 
 const inputs = document.querySelectorAll('.input');
 const GLOBAL_LANG = $('html').attr('lang') || 'ru';
@@ -10,14 +11,22 @@ if (inputs.length) {
         const inputEl = input.querySelector('input');
         const textareaEl = input.querySelector('textarea');
         const trigger = inputEl ?? textareaEl;
+        const labelPlaceholder = input.querySelector('.input__label');
 
         if (trigger) {
             trigger.addEventListener('focus', (e) => {
                 e.target.classList.add('on-focus');
+                labelPlaceholder.classList.remove('hidden');
             });
 
             trigger.addEventListener('blur', (e) => {
                 e.target.classList.remove('on-focus');
+
+                if (trigger.value !== '') {
+                    labelPlaceholder.classList.remove('hidden');
+                } else {
+                    labelPlaceholder.classList.add('hidden');
+                }
             });
         }
 
@@ -39,8 +48,6 @@ if (GLOBAL_LANG == 'ru') {
         email: 'Пожалуйста, введите корректный адрес E-mail.',
         number: 'Пожалуйста, введите цифры.',
         maxlength: $.validator.format('Пожалуйста, введите не больше {0} символов.'),
-        minlength: $.validator.format('Пожалуйста, введите не меньше {0} символов.'),
-        min: $.validator.format("Введите значение, большее или равное {0}."),
         max: $.validator.format("Введите значение, меньшее или равное {0}.")
     });
 }
@@ -78,7 +85,7 @@ $('form').each(function() {
                 let typeElement = $(element).attr('name');
                 this.element(element);
 
-                if (typeElement == 'phone' || typeElement == 'name' ||typeElement == 'email') {
+                if (typeElement == 'phone' || typeElement == 'name' || typeElement == 'email' || typeElement == 'message') {
                     getValidClasses(element);
                 }
             }
@@ -98,7 +105,7 @@ $('form').each(function() {
                 valemail: true
             },
             message: {
-                minlength: 1,
+                maxlength: 3000,  
             },
         },
     });

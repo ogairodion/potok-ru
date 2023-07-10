@@ -3,16 +3,33 @@
     flex-direction: column;
     max-width: fit-content;
 
+    label.error {
+        order: 1;
+        font-size: 13px;
+        line-height: 120%;
+        color: $red;
+        margin-bottom: 8px;
+    }
+
     &__label {
+        order: 0;
+        opacity: 1;
         color: rgba($black_dark, .6);
         margin-bottom: 8px;
+        animation: show .4s ease;
 
         span {
             color: $red;
         }
+
+        &.hidden {
+            opacity: 0;
+            display: block !important; 
+        }
     }
 
     input {
+        order: 2;
         min-height: 53px;
         border: 1px solid $grey_disabled;
         border-radius: 4px;
@@ -21,6 +38,7 @@
     } 
 
     textarea {
+        order: 2;
         min-height: 158px;
         border: 1px solid $grey_disabled;
         border-radius: 4px;
@@ -29,9 +47,16 @@
     }
 
     &__count {
+        order: 3;
         display: flex;
         align-items: center;
         color: rgba($black_dark, .6);
         margin-top: 11px;
+    }
+
+    &.error-wrapper {
+        input, textarea {
+            border: 1px solid $red;
+        }
     }
 }
