@@ -1,0 +1,19 @@
+mixin card-banner(element)
+    .card-banner  
+        .card-banner__icon 
+            .card-banner__icon-wrapper 
+                img(src="img/" + element.icon + ".svg", alt="")
+        .card-banner__wrapper 
+            .card-banner__title.font-h3= element.title
+            .card-banner__content 
+                -if (element.list)
+                    .card-banner__list  
+                        each element_list_item in element.list
+                            .card-banner__item.font-p-2!= element_list_item
+                -if (element.caption)
+                    .card-banner__caption.font-p-2.font-b= element.caption
+                -if (element.items)
+                    each element_item in element.items
+                        .card-banner__item 
+                            .card-banner__item-text.font-p-2= element_item.text
+                            a.card-banner__item-link.font-p-1(href=element_item.href)= element_item.link
