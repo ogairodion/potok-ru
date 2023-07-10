@@ -8,15 +8,17 @@ block variables
 block content
     include ../blocks/modules/header/header.pug
     include ../blocks/components/card/card-data.pug
-    include ../blocks/components/card/card-banner.pug
+    include ../blocks/components/card/card-document.pug
 
     .main__test
-      each banner_card in banner_cards
+      each document_card in document_cards
         .main__test-item
-          +card-banner({
-            title: banner_card.title,
-            list: banner_card.list,
-            icon: banner_card.icon,
+          +card-document({
+            title: document_card.title,
+            name: document_card.name,
+            format: document_card.format,
+            weight: document_card.weight,
+            href: document_card.href,
           })
 
 block scripts

@@ -205,4 +205,67 @@
             }
         }
     }
+
+    &-document {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 233px;
+            box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
+            padding: 32px 24px;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__name {
+            @include tr('all');
+            font-weight: 600;
+        }
+
+        &__bottom {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+
+            &-format {
+                @include tr('all');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                background: $blue_general;
+                color: $white;
+                margin-right: 16px;
+            }
+
+            &-weight {
+                color: $blue_general;
+            }
+        }
+
+        &__preview {
+            display: block;
+            color: $blue_general;
+            margin-top: 16px;
+        }
+
+        &:hover {
+            .card {
+                &-document {
+                    &__name {
+                        color: $blue_hover;
+                    }
+
+                    &__bottom {
+                        &-format {
+                            background: $blue_hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
