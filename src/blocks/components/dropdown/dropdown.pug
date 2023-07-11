@@ -2,9 +2,9 @@ include ../checkbox/checkbox.pug
 
 mixin dropdown(element)
     .dropdown
-        .dropdown__label.error__label.hidden Ошибка
+        .dropdown__label.error__label.form-small.hidden Ошибка
         .dropdown__top
-            .dropdown__placeholder= element.text
+            .dropdown__placeholder.font-form= element.text
             .dropdown__arrow 
                 i(data-feather="chevron-down")
         .dropdown__list
@@ -12,4 +12,4 @@ mixin dropdown(element)
                 .dropdown__list-item
                     .dropdown__list-checkbox
                         +checkbox({ checked: false, disabled: false, value: item.value })
-                    .dropdown__list-text= item.text
+                    .dropdown__list-text.font-form= item.text
