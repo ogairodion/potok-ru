@@ -1,0 +1,15 @@
+include ../checkbox/checkbox.pug
+
+mixin dropdown(element)
+    .dropdown
+        .dropdown__label.error__label.hidden Ошибка
+        .dropdown__top
+            .dropdown__placeholder= element.text
+            .dropdown__arrow 
+                i(data-feather="chevron-down")
+        .dropdown__list
+            each item in element.list
+                .dropdown__list-item
+                    .dropdown__list-checkbox
+                        +checkbox({ checked: false, disabled: false, value: item.value })
+                    .dropdown__list-text= item.text

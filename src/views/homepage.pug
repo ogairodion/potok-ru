@@ -7,28 +7,17 @@ block variables
 
 block content
     include ../blocks/modules/header/header.pug
-    include ../blocks/components/input/input.pug
+    include ../blocks/components/dropdown/dropdown-data.pug
+    include ../blocks/components/dropdown/dropdown.pug
 
     main.main
       .l-default
-        form
-          .main__test
-            .main__test-item
-              +input({
-                type: 'text',
-                placeholder: 'Placeholder text *',
-                required_text: 'Placeholder text <span>*</span>',
-                required: true,
-                name: 'name',
-              })
-
+        .main__test
           .main__test-item
-              +input({
-                type: 'textarea',
-                placeholder: 'Введите имя',
-                name: 'message',
-                max: '3000',
-              })
+            +dropdown({
+              text: 'Droppdown text',
+              list: dropdown_list,
+            })
 
 block scripts
   script(defer src="js/vendor.js")
