@@ -1,0 +1,15 @@
+.news {
+    .font-h2 {
+        margin-bottom: 48px;
+    }
+
+    .card-news {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__more {
+        margin-top: 48px;
+    }
+}

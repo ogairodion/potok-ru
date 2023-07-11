@@ -19,6 +19,9 @@ mixin button(element)
                     - if (element.icon_right)
                         .button__icon
                             i(data-feather=element.icon_right)
+                    - if (element.icon)
+                        .button__icon
+                            +svgMono(element.icon)
             - else
                 button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
                     - if (element.icon_left)
@@ -29,6 +32,9 @@ mixin button(element)
                     - if (element.icon_right)
                         .button__icon
                             i(data-feather=element.icon_right)
+                    - if (element.icon)
+                        .button__icon
+                            +svgMono(element.icon)
     
     - else 
         button.button(class='button-' + element.typeBtn class='button-' + element.typeBtn + '-' + element.color type=element.type)

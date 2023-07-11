@@ -1,0 +1,26 @@
+.reviews {
+    .font-h2 {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        max-width: 536px;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 48px;
+        
+        a {
+            color: $blue_general;
+        }
+    }
+
+    .card-reviews {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+    }
+
+    .button {
+        margin-top: 48px;
+    }
+}

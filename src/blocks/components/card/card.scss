@@ -52,6 +52,7 @@
 
     &-news {
         padding: 48px;
+        box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
         
         &__wrapper {
             max-width: 852px;
@@ -110,6 +111,7 @@
 
     &-reviews {
         padding: 48px;
+        box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
 
         &__top {
             display: flex;

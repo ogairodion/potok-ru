@@ -1,0 +1,43 @@
+include ../.././components/card/card-news.pug
+include ../.././components/button/button.pug
+
+-
+    const news = [
+        {
+            date: '18.01.2023, 14:55',
+            title: 'Изменения в программе Поток и RTI',
+            items: [
+                {
+                    caption: 'Поток',
+                    list: ['Исправлена редкая ошибка возникающая при расчете систем подготовленных в предыдущих версиях программы.', 'Переработан алгоритм балансировки стояков системы уменьшением их диаметров.'],
+                },
+            ],
+        },
+        {
+            date: '18.01.2023, 14:55',
+            title: 'Изменения в программе Поток и RTI',
+            items: [
+                {
+                    caption: 'Поток',
+                    list: ['Исправлена редкая ошибка возникающая при расчете систем подготовленных в предыдущих версиях программы.', 'Переработан алгоритм балансировки стояков системы уменьшением их диаметров.'],
+                },
+            ],
+        },
+    ]
+
+section.news    
+    .l-default
+        h2.font-h2 Обновление наших программ
+        .news__items
+            each news_item in news
+                +card-news({
+                    date: news_item.date,
+                    title: news_item.title,
+                    items: news_item.items,
+                })
+        .news__more
+            +button({
+                text: 'Читать все новости',
+                icon: 'newspaper',
+                color: 'blue-general',
+            })
