@@ -19,10 +19,17 @@
         &__submit {
             display: flex;
             align-items: center;
+            margin-left: auto;
         }
 
         &.white {
             color: $white;
+            
+            .form-subscribe {
+                &__wrapper {
+                    border-bottom: 1px solid $white;
+                }
+            }
 
             input {
                 color: $white;

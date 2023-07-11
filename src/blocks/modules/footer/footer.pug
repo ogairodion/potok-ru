@@ -1,0 +1,42 @@
+include ../.././components/form/form-subscribe.pug
+
+footer.footer
+    .l-default
+        .footer__top
+            .footer__logo
+                +svgMono('logo')
+        .footer__content
+            .footer__column
+                .footer__column-address.font-p-1 ООО ПОТОК. Почтовый адрес: 141070 Московская обл. г. Королев ул. Фрунзе 1 «Д» корп.2 к.91
+                a.footer__column-phone.font-p-1(href="tel:+74955653839") Tel: +7 (495) 565-38-39
+                a.footer__column-mail.font-p-1(href="mailto:+74955653839") E-mail: potok@potok.ru
+                a.footer__column-telegram(href="")
+                    +svgMono('telegram')
+            .footer__column
+                .footer__menu
+                    a.footer__menu-item.font-p-1(href="") Компания
+                    a.footer__menu-item.font-p-1(href="") Демоверсия
+                    a.footer__menu-item.font-p-1(href="") Загрузить
+                    a.footer__menu-item.font-p-1(href="") Поддержка
+                    a.footer__menu-item.font-p-1(href="") Цены
+                    a.footer__menu-item.font-p-1(href="") Новости
+                    a.footer__menu-item.font-p-1(href="") Контакты
+            .footer__column
+                h3.footer__column-title.font-h3 Подпишитесь на наши новости
+                +form-subscribe({
+                    color: 'white',
+                    class: 'white',
+                    placeholder: 'Ваш e-mail *',
+                })
+                a.footer__forum(href="")   
+                    .footer__forum-icon 
+                        i(data-feather="users")
+                    .footer__forum-text Форум
+        .footer__bottom
+            .footer__bottom-column
+                .footer__bottom-item.font-small &copy; Copyright 2000-2023 «Поток»
+            .footer__bottom-column
+                a.footer__bottom-item.font-small(href="") Политика конфиденциальности Использование Cookies
+            .footer__bottom-column
+                .footer__bottom-item.font-small Img: Unsplash; Feather iconsPhosphor icons; Freepik
+                .footer__bottom-item.font-small Разработка сайта: <a class="footer__bottom-link" href="https://freelab.ru/">Freelab.ru</a>
