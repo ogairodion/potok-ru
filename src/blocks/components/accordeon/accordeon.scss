@@ -1,10 +1,7 @@
 .accordeon {
-    padding: 20px;
-
     &__item {
-        padding: 15px 20px;
+        padding: 15px 20px 21px 0;
         border-bottom: 1px solid $grey;
-        margin-right: 20px;
     }
 
     &__top {
@@ -20,6 +17,7 @@
         align-items: center;
         justify-content: center;
         min-width: 32px;
+        margin-left: 20px;
 
         svg {
             width: 100%;

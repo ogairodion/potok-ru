@@ -1,0 +1,14 @@
+.questions {
+    .font-h2 {
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        max-width: 590px;
+        margin-bottom: 48px;
+
+        a {
+            color: $blue_general;
+        }
+    }
+}

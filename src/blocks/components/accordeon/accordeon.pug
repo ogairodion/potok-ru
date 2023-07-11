@@ -2,7 +2,7 @@ mixin accordeon(element)
     .accordeon
         each accordeon_item in element
             each item in accordeon_item
-                .accordeon__item.open
+                .accordeon__item
                     .accordeon__top
                         .accordeon__title.font-h3= item.title
                         .accordeon__arrow   
