@@ -1,6 +1,6 @@
 mixin input(element)
     - if (element.type !== 'textarea')
-        .input(data-required=element.required)
+        .input(data-required=element.required class=element.class)
             label.input__label.font-small.hidden!= element.required_text
             input.font-form(type=element.type placeholder=element.placeholder required=element.required name=element.name)
     - else 

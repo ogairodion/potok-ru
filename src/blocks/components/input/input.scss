@@ -59,4 +59,20 @@
             border: 1px solid $red;
         }
     }
+
+    &-subscribe {
+        position: relative;
+
+        input {
+            border: none;
+            padding: 0;
+        }
+
+        &.input {
+            label.error {
+                position: absolute;
+                top: calc(-100% + 24px);
+            }
+        }
+    }
 }

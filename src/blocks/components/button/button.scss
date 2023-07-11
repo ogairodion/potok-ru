@@ -67,14 +67,14 @@
         box-shadow: 0px 0px 35px 0px rgba(0, 120, 191, 0.08);
 
         svg {
-            fill: $blue_general;
+            stroke: $blue_general;
         }
 
         &:hover {
             background: $black_general;
 
             svg {
-                fill: $white;
+                stroke: $white;
             }
         }
 
