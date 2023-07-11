@@ -1,0 +1,18 @@
+include ../.././components/button/button.pug
+
+section.subscribe
+    .l-default
+        .subscribe__title.font-accent Наше программное обеспечение может работать с любым производителем труб, отопительных приборов и запорно-регулировочной арматуры. <span>Среда использования MS Windows VISTA, Windows 7, Windows 8, Windows 10</span>
+        .subscribe__wrapper
+            .subscribe__item
+                .subscribe__item-description.font-p-1 Поставляем конечное, готовое решение. На рынке с 1969 года.
+                .subscribe__item-btn 
+                    +button({
+                        text: 'Подписаться на новости',
+                        icon_right: 'bell',
+                        color: 'blue-general',
+                    })
+            .subscribe__item
+                a.subscribe__item-link.font-p-1(href="") «TEPLOOV». Пакет программ для расчёта систем отопления, вентиляции и тепловых расчётов
+                a.subscribe__item-link.font-p-1(href="") Обзор возможностей программ пакета TEPLOOV
+                a.subscribe__item-link.font-p-1(href="") Сертификат соответствия в системе ГОСТ Р № РОСС RA.RU.АБ86.Н01001

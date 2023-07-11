@@ -32,7 +32,11 @@ body {
     z-index: z("l-default");
     display: flex;
     flex-direction: column;
-    padding: 80px 0 120px;
+    padding-bottom: 40px;
+}
+
+section {
+    padding: 80px 0;
 }
 
 .lazy, .swiper-lazy  {

@@ -3,6 +3,12 @@
     max-width: fit-content;
     cursor: pointer;
 
+    button {
+        min-height: 68px;
+        font-weight: 600;
+        padding: 22px 32px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
@@ -30,8 +36,23 @@
         }
     }
 
+    &-white {
+        background: $white;
+        border: 1px solid $black_general;
+
+        svg {
+            stroke: $white;
+        }
+
+        &:hover, &:active {
+            color: $white;
+            background: $black_general;
+        }
+    }
+
     &__icon {
-        font-size: 24px;
+        width: 24px;
+        height: 24px;
 
         &:last-child {
             margin-left: 8px;
@@ -83,6 +104,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+        }
+
+        &-white {
+            background: $blue_general;
+
+            svg {
+                stroke: $white;
             }
         }
     }

@@ -1,12 +1,14 @@
 include ../button/button.pug
 
-form.form-subscribe
-    .form-subscribe__wrapper
-        .input.input-subscribe
-            input(type="email" placeholder="Ваш e-mail *")
-        .form-subscribe__submit
-            +button({
-                typeBtn: 'arrow',
-                type: 'submit',
-                icon: 'chevron-right',
-            })
+mixin form-subscribe(element)
+    form.form-subscribe(class=element.class)
+        .form-subscribe__wrapper
+            .input.input-subscribe
+                input(type=element.type placeholder=element.placeholder)
+            .form-subscribe__submit
+                +button({
+                    typeBtn: 'arrow',
+                    type: 'submit',
+                    icon: 'chevron-right',
+                    color: element.class,
+                })

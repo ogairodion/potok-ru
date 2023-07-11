@@ -1,0 +1,39 @@
+.subscribe {
+    &__title {
+        margin-bottom: 48px;
+
+        span {
+            color: $blue_general;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex: 1 auto;
+        width: calc(50% - 40px);
+
+        &-link {
+            display: block;
+            color: $blue_general;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-description {
+            max-width: 458px;
+            margin-bottom: 16px;
+        }
+
+        &-btn {
+            margin-top: auto;
+        }
+    }
+}

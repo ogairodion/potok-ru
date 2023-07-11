@@ -20,5 +20,17 @@
             display: flex;
             align-items: center;
         }
+
+        &.white {
+            color: $white;
+
+            input {
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                }
+            }
+        }
     }
 }

@@ -31,6 +31,6 @@ mixin button(element)
                             i(data-feather=element.icon_right)
     
     - else 
-        button.button(class='button-' + element.typeBtn type=element.type)
+        button.button(class='button-' + element.typeBtn class='button-' + element.typeBtn + '-' + element.color type=element.type)
             .button__icon   
                 i(data-feather=element.icon)

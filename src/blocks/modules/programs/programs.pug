@@ -1,0 +1,15 @@
+include ../.././components/card/card-data.pug
+include ../.././components/card/card-program.pug
+
+section.programs
+    .l-default
+        .programs__title.font-h1 Пакет программ TEPLOOV
+        .programs__items
+            each program_card in program_cards
+                +card-program({
+                    href: program_card.href,
+                    title: program_card.title,
+                    price: program_card.price,
+                    text: program_card.text,
+                    date: program_card.date,
+                })
