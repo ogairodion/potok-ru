@@ -1,0 +1,12 @@
+include ../button/button.pug
+
+form.form-subscribe
+    .form-subscribe__wrapper
+        .input.input-subscribe
+            input(type="email" placeholder="Ваш e-mail *")
+        .form-subscribe__submit
+            +button({
+                typeBtn: 'arrow',
+                type: 'submit',
+                icon: 'chevron-right',
+            })

@@ -1,0 +1,24 @@
+.form {
+    &-subscribe {
+        &__wrapper {
+            display: flex;
+            max-width: fit-content;
+            min-height: 56px;
+            border-bottom: 1px solid $grey_disabled;
+
+            &:hover {
+                border-bottom: 1px solid $black_general;
+            }
+        }
+
+        .input {
+            flex: 1 1 auto;
+            border: none;
+        }
+
+        &__submit {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
