@@ -145,6 +145,20 @@ img {
         }
     }
 
+    &-404 {
+        position: relative;
+        z-index: z("l-default");
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 10px; 
+
+        @media screen and (min-width: 1280px) {
+            padding: 0; 
+        }
+    }
+
     &-footer {
         position: relative;
         z-index: z("l-default");

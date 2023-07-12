@@ -9,7 +9,7 @@
     &__top {
         padding: 23px 0;
 
-        @media (min-width: 1200px) {
+        @media (min-width: 640px) {
             border-bottom: 1px solid rgba($grey_disabled, .1);
             padding: 16px 0;
         }

@@ -1,0 +1,15 @@
+include ../.././components/button/button.pug
+
+section.page-404
+    .l-404
+        .page-404__img 
+            +webp(['404/404'], 'png')
+        .page-404__info
+            .page-404__title.font-h2 Такая страница не найдена
+            .page-404__btn  
+                +button({
+                    text: 'Перейти на Главную сайта',
+                    color: 'blue-general',
+                    href: '/',
+                    tag: 'link',
+                })
