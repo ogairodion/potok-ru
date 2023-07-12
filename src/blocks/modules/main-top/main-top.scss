@@ -36,4 +36,42 @@
             }
         }
     }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__img {
+        margin-bottom: 32px;
+    }
+
+    &__subtitle {
+        span {
+            color: $blue_general;
+        }
+    }
+
+    &__columns {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 46px;
+    }
+
+    &__column {
+        width: calc(50% - 40px);
+
+        a {
+            color: $blue_general;
+        }
+
+        &-title {
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__btn {
+        margin-top: 48px;
+    }
 }

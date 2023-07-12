@@ -1,0 +1,4 @@
+mixin breadcrumbs(element)
+    .breadcrumbs
+        each item in element
+            a.breadcrumbs__item(href=item.href)= item.text

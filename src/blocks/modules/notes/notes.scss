@@ -1,0 +1,31 @@
+.notes {
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    &__column {
+        width: calc(50% - 40px);
+    }
+
+    &__btn {
+        margin-top: 48px;
+    }
+
+    &__subtitle {
+        span {
+            color: $blue_general;
+        }
+    }
+
+    &__texts {
+        a {
+            color: $blue_general;
+        }
+    }
+}

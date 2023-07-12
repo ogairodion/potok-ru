@@ -1,0 +1,39 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../../blocks/components/button/button.pug
+
+-
+    const columns = [
+        {
+            title: 'Организатор:',
+            text: 'Группа разработки и внедрения (алгоритм) ООО «ПОТОК»<br> И.П. Иванникова Ольга Владиславовна<br> (495) 565-38-39 доб.220 (221)<br> email: <a href="mailto:olga@potok.ru">olga@potok.ru</a>'
+        },
+        {
+            title: 'Участие:',
+            text: 'Стоимость для одного человека расчитывается индивидуально, по запросу. Место проведения: онлайн. Также доступен онлайн курс на ресурсе:<br> <a href="master.teploov.ru">master.teploov.ru</a>'
+        }
+    ]
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Авторский практикум' }
+        ])
+        h1.main-top__title.font-h1.font-b Авторский практикум
+        .main-top__img 
+            +webp(['main-top/2'], 'jpg')
+        .main-top__subtitle.font-accent Примите участие в авторском практикуме <span>«Применение современного программного обеспечения ПС TEPLOOV для проектирования систем отопления и вентиляции».</span>
+        .main-top__columns
+            each column in columns
+                .main-top__column
+                    .main-top__column-title.font-h4= column.title
+                    .main-top__column-text.font-p-1!= column.text
+        .main-top__btn
+            +button({
+                text: 'Записаться на практикум',
+                color: 'blue-general',
+                icon: 'study',
+                href: '/',
+                tag: 'link',
+            })
+        

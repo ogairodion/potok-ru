@@ -1,0 +1,26 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: rgba($grey_disabled, .6);
+
+        &:after {
+            content: '—';
+            display: block;
+            margin: 0 8px;
+        }
+
+        &:last-child {
+            color: $black_general;
+            pointer-events: none;
+        
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
