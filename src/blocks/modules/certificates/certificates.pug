@@ -1,0 +1,51 @@
+include ../.././components/card/card-document.pug
+
+-
+    const certificates = [
+        {
+            title: 'Cертификат соответствия',
+            name: 'teploov_sertifikat_2021_2024',
+            weight: '770.28 Kb',
+            format: 'zip',
+            href: '',
+            popup: '',
+        },
+        {
+            title: 'Cертификат соответствия',
+            name: 'teploov_sertifikat_2021_2024',
+            weight: '770.28 Kb',
+            format: 'zip',
+            href: '',
+            popup: '',
+        },
+        {
+            title: 'Cертификат соответствия',
+            name: 'teploov_sertifikat_2021_2024',
+            weight: '770.28 Kb',
+            format: 'zip',
+            href: '',
+            popup: '',
+        },
+        {
+            title: 'Cертификат соответствия',
+            name: 'teploov_sertifikat_2021_2024',
+            weight: '770.28 Kb',
+            format: 'zip',
+            href: '',
+            popup: '',
+        }
+    ]
+
+section.certificates
+    .l-default 
+        h2.certificates__title.font-h2 Наши сертификаты
+        .certificates__items
+            each certificate in certificates
+                +card-document({
+                    title: certificate.title,
+                    name: certificate.name,
+                    weight: certificate.weight,
+                    format: certificate.format,
+                    href: certificate.href,
+                    popup: certificate.popup,
+                })

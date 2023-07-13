@@ -1,0 +1,25 @@
+-
+    const advantages = [
+        {
+            icon: 'cloud',
+            text: 'Мы всегда применяем только современные технологии создания программного обеспечения',
+        },
+        {
+            icon: 'atom',
+            text: 'Постоянно улучшаем и развиваем алгоритмы расчёта для соответствия требованиям нашего времени',
+        },
+        {
+            icon: 'toolbox',
+            text: 'Мы поставляем конечное, готовое решение. Вам не нужно докупать что-то дополнительно',
+        }
+    ]
+
+section.advantages-horizontal
+    .l-default 
+        h2.advantages-horizontal__title.font-h2 Наши преимущества
+        .advantages-horizontal__items
+            each advantage in advantages
+                .advantages-horizontal__item
+                    .advantages-horizontal__item-icon
+                        +svgMono(advantage.icon)
+                    .advantages-horizontal__item-text.font-p-1= advantage.text

@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = ""
+
+block content
+  include ../../blocks/modules/header/header.pug
+  main.main
+    include ../../blocks/modules/main-top/main-top-company.pug
+    include ../../blocks/modules/advantages/advantages-horizontal.pug
+    include ../../blocks/modules/video/video.pug
+    include ../../blocks/modules/certificates/certificates.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts

@@ -38,4 +38,33 @@
         max-width: 360px;
         margin-right: 37px;
     }
+
+    &-horizontal {
+        &__title {
+            margin-bottom: 48px;
+        }
+
+        &__items {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        &__item {
+            width: calc(33.3333% - 40px);
+
+            &-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                font-size: 46px;
+                border-radius: 4px;
+                background: $blue_general;
+                padding: 7px;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }

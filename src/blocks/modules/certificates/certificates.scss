@@ -1,0 +1,15 @@
+.certificates {
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .card-document {
+        width: calc(50% - 40px);
+    }
+}
