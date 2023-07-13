@@ -1,0 +1,5 @@
+mixin tabs(element)
+    .tabs
+        each tab in element
+            .tabs__item.font-numbers(data-value=tab.value class=tab.active)
+                span= tab.value

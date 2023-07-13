@@ -1,0 +1,23 @@
+include ../../../blocks/components/tabs/tabs.pug
+include ../../../blocks/components/card/card-document.pug
+
+include tabs-section-data.pug
+
+section.tabs-section
+    .l-default 
+        +tabs(tabs_upload)
+        .tabs-section__content
+            each tab_content, index in tabs_upload
+                .tabs__content(data-value=tab_content.value)
+                    each card in cards_upload 
+                        .tabs-section__item
+                            .tabs-section__item-title.font-h2= card.title + ' ' + index
+                            .tabs-section__item-cards
+                                each card_document in card.items 
+                                    +card-document({
+                                        href: card_document.href,
+                                        title: card_document.title,
+                                        name: card_document.name,
+                                        format: card_document.format,
+                                        weight: card_document.weight,
+                                    })

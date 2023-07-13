@@ -1,0 +1,36 @@
+.tabs-section {
+    padding-top: 0;
+    
+    .tabs {
+        margin-bottom: 32px;
+    }
+
+    .tabs__content {
+        display: none;
+        animation: show .4s ease;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 80px;
+        }
+
+        &-title {
+            margin-bottom: 48px;
+        }
+
+        &-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .card-document {
+            width: calc(50% - 40px);
+        }
+    }
+}

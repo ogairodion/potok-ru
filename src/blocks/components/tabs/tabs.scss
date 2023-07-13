@@ -1,0 +1,41 @@
+.tabs {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        border-bottom: 1px solid rgba($black_general, .2);
+        padding-bottom: 12px;
+        cursor: pointer;
+
+        span {
+            position: relative;
+            display: flex;
+            flex: 1 1 auto;
+            max-width: fit-content;
+
+            &:after {
+                position: absolute;
+                left: 0;
+                bottom: -12px;
+                content: '';
+                display: none;
+                height: 1px;
+                width: 100%;
+                background: $blue_hover;
+            }
+        }
+
+        &.active {
+            color: $blue_hover;
+
+            span {
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+}
