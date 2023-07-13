@@ -1,0 +1,10 @@
+include ../.././components/accordeon/accordeon.pug
+include branches-data.pug 
+
+section.branches
+    .l-default 
+        h2.branches__title.font-h2 Филиалы
+        .branches__list
+            +accordeon({
+                element: branches,
+            })

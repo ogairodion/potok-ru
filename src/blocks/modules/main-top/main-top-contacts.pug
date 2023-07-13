@@ -1,0 +1,20 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top.main-top--contacts
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Контакты' }
+        ])
+        h1.main-top__title.font-h1.font-b Контакты
+        .main-top__img 
+            +webp(['main-top/8'], 'jpg')
+        .main-top__contacts
+            h2.font-h2.main-top__contacts-title.font-h2 Центральный офис компании
+            .main-top__contacts-info
+                a.main-top__contacts-phone.font-h3(href="") +7 (495) 565-38-39
+                a.main-top__contacts-email.font-h3(href="") potok@potok.ru
+                .main-top__contacts-address.font-h3 141070 Московская обл. г. Королев ул. Фрунзе 1 "Д" корп.2 к.91
+                a.main-top__contacts-telegram(href="")  
+                    +svgMono('telegram-white')
+        

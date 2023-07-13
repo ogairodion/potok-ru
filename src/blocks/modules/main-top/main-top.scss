@@ -79,4 +79,56 @@
     &__btn {
         margin-top: 48px;
     }
+
+    &--contacts {
+        .main-top {
+            &__img {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: flex-start;
+        border: 1px solid $grey_disabled;
+        border-top: none;
+        padding: 48px 24px;
+
+        &-title {
+            max-width: 560px;
+        }
+
+        &-info {
+            max-width: 460px;
+        }
+
+        &-phone {
+            margin-bottom: 8px;
+        }
+
+        &-email {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: $blue_general;
+        }
+
+        &-address {
+            margin-bottom: 24px;
+        }
+
+        &-telegram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            font-size: 15px;
+            background: $blue_general;
+            padding: 12px 10px;
+        }
+    }
 }
