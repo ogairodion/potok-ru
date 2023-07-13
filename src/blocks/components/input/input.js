@@ -5,6 +5,13 @@ import validate from 'jquery-validation';
 
 const inputs = document.querySelectorAll('.input');
 const GLOBAL_LANG = $('html').attr('lang') || 'ru';
+const phones = document.querySelectorAll('.phone');
+
+if (phones.length) {
+    Inputmask({
+        mask: '+7 (999) 999-9999',
+    }).mask('.phone');
+}
 
 if (inputs.length) {
     inputs.forEach((input) => {

@@ -11,5 +11,7 @@ PageList:
     ready: 1
   - file: upload.html
     ready: 1
+  - file: support.html
+    ready: 1
   - file: 404.html
     ready: 1

@@ -1,0 +1,56 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+section.form-contact-us
+    .l-default
+        form.form
+            h2.form-contact-us__title.font-h2 Хотите связаться с нами?
+            .form__inputs 
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    reqiured: true,
+                    required_text: 'Имя <span>*</span>',
+                    placeholder: 'Имя *',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'company',
+                    required_text: 'Компания',
+                    placeholder: 'Компания',
+                })
+
+                +input({
+                    type: 'phone',
+                    name: 'phone',
+                    reqiured: true,
+                    required_text: 'Номер телефона <span>*</span>',
+                    placeholder: '+7 (_ _ _) _ _ _  _ _   _ _  *',
+                })
+
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    required_text: 'E-mail',
+                    placeholder: 'E-mail',
+                })
+            .form__message
+                +input({
+                    type: 'text',
+                    name: 'comment',
+                    reqiured: true,
+                    required_text: 'Сообщение <span>*</span>',
+                    placeholder: 'Сообщение *',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить сообщение',
+                    color: 'white',
+                })
+

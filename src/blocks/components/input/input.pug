@@ -1,8 +1,10 @@
 mixin input(element)
+    - const phone = element.type === 'phone' ? 'phone' : '';
+
     - if (element.type !== 'textarea')
         .input(data-required=element.required class=element.class)
             label.input__label.font-small.hidden!= element.required_text
-            input.font-form(type=element.type placeholder=element.placeholder required=element.required name=element.name)
+            input.font-form(type=element.type placeholder=element.placeholder required=element.required name=element.name class=phone)
     - else 
         .input(data-required=element.required)
             label.input__label.font-small.hidden= element.placeholder

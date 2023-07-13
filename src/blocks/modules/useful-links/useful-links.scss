@@ -1,0 +1,20 @@
+.useful-links {
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        max-width: 552px;
+        margin-bottom: 32px;
+    }
+
+    &__link {
+        display: block;
+        color: $blue_general;
+        text-decoration: underline;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.form-contact-us {
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    .input {
+        max-width: 100%;
+    }
+
+    .form {
+        &__inputs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex: 1 1 auto;
+            width: 100%;
+            gap: calc(40px - 15px);
+            margin-bottom: calc(40px - 15px);
+            
+            .input {
+                width: calc(50% - 40px);
+            }
+        }
+
+        &__privacy {
+            margin-top: 16px;
+        }
+
+        &__submit {
+            margin-top: 48px;
+        }
+    }
+}
