@@ -14,11 +14,12 @@
             flex-wrap: wrap;
             flex: 1 1 auto;
             width: 100%;
-            gap: calc(40px - 15px);
+            gap: 40px;
             margin-bottom: calc(40px - 15px);
             
             .input {
-                width: calc(50% - 40px);
+                width: calc(50% - 20px);
+                margin-top: -15px;
             }
         }
 
