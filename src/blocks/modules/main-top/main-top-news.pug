@@ -1,0 +1,13 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Новости' }
+        ])
+        h1.main-top__title.font-h1.font-b Новости
+        .main-top__img 
+            +webp(['main-top/7'], 'jpg')
+        .main-top__subtitle.font-accent Мы регулярно совершенствуем наши программы — <span>здесь вы можете познакомиться с самыми последними изменениями</span>
+        

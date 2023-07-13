@@ -1,1 +1,27 @@
-section.news    
+include ../.././components/card/card-news.pug
+include ../.././components/button/button.pug
+include ../.././components/tag/tag.pug
+include ../.././components/clear-filter/clear-filter.pug
+include news-data.pug
+
+section.news.pt-n
+    .l-default
+        .news__tags     
+            each tag in tags 
+                +tag({
+                    text: tag.text,
+                })
+            +clear()
+        .news__items
+            each news_item in news
+                +card-news({
+                    date: news_item.date,
+                    title: news_item.title,
+                    items: news_item.items,
+                })
+        .news__more
+            +button({
+                text: 'Читать все новости',
+                icon: 'newspaper',
+                color: 'blue-general',
+            })

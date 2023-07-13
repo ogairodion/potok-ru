@@ -1,6 +1,11 @@
 .tag {
     @include tr('all');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
     background: $white;
+    border: 1px solid $grey;
     border-radius: 4px;
     padding: 4px 32px;
 
@@ -10,6 +15,11 @@
     }
 
     &--active {
+        background: $blue_hover;
+    }
+
+    &.active {
+        color: $white;
         background: $blue_hover;
     }
 }
