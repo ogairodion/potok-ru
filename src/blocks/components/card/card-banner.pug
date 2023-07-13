@@ -1,4 +1,6 @@
 mixin card-banner(element)
+    - const download = element.download
+    
     .card-banner  
         .card-banner__icon 
             .card-banner__icon-wrapper 
@@ -15,5 +17,6 @@ mixin card-banner(element)
                 -if (element.items)
                     each element_item in element.items
                         .card-banner__item 
-                            .card-banner__item-text.font-p-2= element_item.text
-                            a.card-banner__item-link.font-p-1(href=element_item.href)= element_item.link
+                            .card-banner__item-text.font-p-2!= element_item.text
+                            each link_item in element_item.links
+                                a.card-banner__item-link.font-p-1(href=link_item.href link_item.download)= link_item.text

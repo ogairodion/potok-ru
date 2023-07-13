@@ -1,0 +1,15 @@
+include ../.././components/card/card-banner.pug
+include plan-data.pug
+
+section.plan
+    .l-default 
+        h2.plan__title.plan__title--10.font-h2 План проведения занятий
+        .plan__subtitle.font-p-1 Ниже представлены последовательные шаги для работы с демоверсиейпрограмм пакета TEPLOOV  
+        .plan__cards
+            each plan_demo_item in plan_demo
+                +card-banner({
+                    title: plan_demo_item.title,
+                    items: plan_demo_item.items,
+                    caption: plan_demo_item.caption,
+                    icon: plan_demo_item.icon,
+                })

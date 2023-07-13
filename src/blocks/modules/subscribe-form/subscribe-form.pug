@@ -1,0 +1,11 @@
+include ../../../blocks/components/form/form-subscribe-banner.pug
+
+section.subscribe-form
+    .l-default  
+        +form-subscribe-banner({
+            title: 'Подписка на новости',
+            subtitle: 'Подпишитесь на нашу рассылку, чтобы первыми узнавать об обновлениях программ пакета Teploov',
+            img: 'form-subscribe/1',
+            placeholder: 'Ваш e-mail *',
+            type: 'email',
+        })

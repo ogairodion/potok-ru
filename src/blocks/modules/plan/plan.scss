@@ -1,6 +1,15 @@
 .plan {
     &__title {
         margin-bottom: 48px;
+
+        &--10 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__subtitle {
+        max-width: 534px;
+        margin-bottom: 32px;
     }
 
     .card-banner {

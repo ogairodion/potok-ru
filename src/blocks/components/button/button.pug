@@ -23,7 +23,7 @@ mixin button(element)
                         .button__icon
                             +svgMono(element.icon)
             - else
-                button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled)
+                button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled type=element.type)
                     - if (element.icon_left)
                         .button__icon
                             i(data-feather=element.icon_left)

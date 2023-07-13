@@ -49,6 +49,11 @@
         span {
             color: $blue_general;
         }
+
+        a {
+            text-decoration: underline;
+            color: $blue_general;
+        }
     }
 
     &__columns {

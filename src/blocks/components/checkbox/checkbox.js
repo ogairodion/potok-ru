@@ -3,7 +3,7 @@ const checkboxes = document.querySelectorAll('.checkbox');
 checkboxes.forEach((checkbox) => {
     const input = checkbox.querySelector('input');
 
-    checkbox.addEventListener('click', (e) => {
+    checkbox.addEventListener('click', () => {
         getChecked(checkbox);
     });
 

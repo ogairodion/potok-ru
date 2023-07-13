@@ -1,0 +1,27 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+-
+    const columns = [
+        {
+            text: 'По электронной почте придёт письмо с необходимой информацией для активация демоверсии. Без активации демоверсии программы не будут работать нужным образом.'
+        },
+        {
+            text: 'Демоверсия предоставляет 30-дневную рабочую версию (при условии корректной активации) с возможностью обновления до рабочей (коммерческой) версии.'
+        }
+    ]
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Демоверсия' }
+        ])
+        h1.main-top__title.font-h1.font-b Демоверсия
+        .main-top__img 
+            +webp(['main-top/4'], 'jpg')
+        .main-top__subtitle.font-accent Для получения демоверсии <a href="">зарегистрируйтесь</a> на сайте, и в процессе регистрации отметьте поле «Получить доступ к демоверсии всех программ» 
+        .main-top__columns
+            each column in columns
+                .main-top__column
+                    .main-top__column-text.font-p-1!= column.text
+        

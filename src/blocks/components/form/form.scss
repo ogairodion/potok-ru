@@ -39,5 +39,36 @@
                 }
             }
         }
+
+        &-banner {
+            display: flex;
+            align-items: flex-start;
+
+            &__img {
+                min-width: 310px;
+                margin-right: 40px;
+            }
+
+            &__title {
+                margin-bottom: 8px;
+            }
+
+            &__subtitle {
+                margin-bottom: 32px;
+            }
+
+            &__wrapper {
+                max-width: 560px;
+            }
+
+            .input {
+                max-width: 100%;
+                margin-bottom: 16px;
+            }
+
+            .button {
+                margin-top: 32px;
+            }
+        }
     }
 }
