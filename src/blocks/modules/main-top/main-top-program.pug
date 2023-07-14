@@ -1,0 +1,13 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Программа ПОТОК' }
+        ])
+        h1.main-top__title.font-h1.font-b Программа ПОТОК
+        .main-top__img 
+            +webp(['main-top/1'], 'jpg')
+        .main-top__subtitle.font-accent Программа для расчета систем отопления, охлаждения теплоснабжения калориферов и оборудования. <span>Может поставлятся как в составе других программ комплекса TEPLOOV, так и отдельно от программ комплекса</span>
+        
