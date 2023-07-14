@@ -1,0 +1,26 @@
+.privacy {
+    padding-top: 0;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .list-lined {
+        padding-left: 28px;
+
+        li {
+            margin-bottom: 20px;
+            
+            &::marker {
+                content: '—  ';
+                display: block;
+            }
+        }
+    }
+}

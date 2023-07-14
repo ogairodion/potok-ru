@@ -17,5 +17,7 @@ PageList:
     ready: 1
   - file: contacts.html
     ready: 1
+  - file: privacy.html
+    ready: 1
   - file: 404.html
     ready: 1
