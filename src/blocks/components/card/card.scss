@@ -277,4 +277,52 @@
             }
         }
     }
+
+    &-about {
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+
+        &__title {
+            border-bottom: 1px solid $grey_disabled;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        &__img, &__info {
+            width: calc(50% - 40px);
+        }
+
+        &__img {
+            border: 6px solid #444652;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        &__more {
+            color: $blue_general;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        &__info {
+            &-caption {
+                margin-bottom: 16px;
+            }
+        }
+
+        &:nth-child(2n) {
+            .card-about {
+                &__content {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
 }

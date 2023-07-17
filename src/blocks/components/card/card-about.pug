@@ -1,0 +1,11 @@
+mixin card-about(element)
+    .card-about  
+        .card-about__title.font-h2.font-b.font-uppercase= element.title
+        .card-about__content
+            .card-about__img
+                +webp([element.img], 'jpg')
+            .card-about__info
+                .card-about__info-title.font-h3= element.caption
+                .card-about__info-text.font-p-1!= element.text
+                .card-about__more.font-p-1 раскрыть
+        

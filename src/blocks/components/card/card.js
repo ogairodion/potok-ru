@@ -1,5 +1,6 @@
 const news_cards = document.querySelectorAll('.card-news');
 const reviews_cards = document.querySelectorAll('.card-reviews');
+const about_cards = document.querySelectorAll('.card-about');
 
 if (news_cards.length) {
     news_cards.forEach((news_card) => {
@@ -27,4 +28,42 @@ if (reviews_cards.length) {
             more.innerText = content.classList.contains('open') ? 'Свернуть отзыв' : 'Читать отзыв полностью';
         });
     });
+}
+
+if (about_cards.length) {
+    about_cards.forEach((card) => {
+        const more = card.querySelector('.card-about__more');
+        const paragraphs = card.querySelectorAll('p');
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            if (i !== 0) {
+                paragraphs[i].classList.add('hidden');
+            }
+        }
+        
+        more.addEventListener('click', () => {
+            hideParagraphs(paragraphs, more);
+        });
+    });
+
+    function hideParagraphs(paragraphs, more) {
+        if (more.innerText == 'скрыть') {
+            for (let i = 0; i < paragraphs.length; i++) {
+                if (i !== 0) {
+                    paragraphs[i].classList.add('hidden');
+                }
+            }
+    
+            more.innerText = 'раскрыть';
+        } else {
+            for (let i = 0; i < paragraphs.length; i++) {
+                if (i !== 0) {
+                    paragraphs[i].classList.remove('hidden');
+                }
+            }
+    
+            more.innerText = 'скрыть';
+        }
+        
+    }
 }

@@ -1,0 +1,12 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Программы' }
+        ])
+        h1.main-top__title.font-h1.font-b Состав пакета TEPLOOV 
+        .main-top__img 
+            +webp(['main-top/1'], 'jpg')
+        

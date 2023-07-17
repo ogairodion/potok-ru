@@ -21,5 +21,7 @@ PageList:
     ready: 1
   - file: cookies.html
     ready: 1
+  - file: pockets.html
+    ready: 1
   - file: 404.html
     ready: 1

@@ -1,0 +1,13 @@
+include ../../../blocks/components/card/card-about.pug
+include pockets-data.pug 
+
+section.pockets
+    .l-default
+        .pockets__items
+            each pocket in pockets 
+                +card-about({
+                    title: pocket.title,
+                    caption: pocket.caption,
+                    text: pocket.text,
+                    img: pocket.img,
+                })
