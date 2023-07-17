@@ -183,6 +183,19 @@ input, textarea {
     border: none;
 }
 
+.list-lined {
+    padding-left: 28px;
+
+    li {
+        margin-bottom: 20px;
+        
+        &::marker {
+            content: '—  ';
+            display: block;
+        }
+    }
+}
+
 .fancybox-content {
     background: none;
     z-index: 99994;

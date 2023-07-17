@@ -5,7 +5,6 @@ if (tabs.length) {
     tabs.forEach((tab) => {
         tab.addEventListener('click', (e) => {
             const tab_item = e.currentTarget;
-            const value = tab.getAttribute('value');
             
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('active');

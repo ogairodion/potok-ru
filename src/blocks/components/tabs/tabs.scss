@@ -1,6 +1,8 @@
 .tabs {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 32px 0;
 
     &__item {
         display: flex;
@@ -36,6 +38,14 @@
                     display: block;
                 }
             }
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
         }
     }
 }

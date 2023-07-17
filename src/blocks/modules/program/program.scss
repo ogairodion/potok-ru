@@ -1,0 +1,29 @@
+.program {
+    padding-top: 0;
+
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    .tabs {
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+
+        &-caption {
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+    }
+}

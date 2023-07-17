@@ -1,0 +1,16 @@
+include ../.././components/tabs/tabs.pug
+include program-data.pug
+
+section.program
+    .l-default 
+        h2.program__title.font-h2 Подробнее о программе
+        .program__tabs
+            +tabs(tabs)
+        .program__content
+            each tab_content, index in tabs
+                - if (index === 0)
+                    .program__content-item.tabs__content(data-value=tab_content.value)
+                        include program-tab-1.pug
+                - if (index === 1)
+                    .program__content-item.tabs__content(data-value=tab_content.value)
+                        include program-tab-2.pug
