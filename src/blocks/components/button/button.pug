@@ -4,13 +4,14 @@ mixin button(element)
     - var size = element.size ? 'button-' + element.size : '';
     - var font_size = element.font_size ? 'font-' + element.font_size : '';
     - var font_weight = element.font_weight ? 'font-' + element.font_weight : '';
+    - var popup = element.popup;
     
     - if (element.typeBtn !== 'arrow')
         .button
             - if (element.label)
                 label.button__label= element.label
             - if (element.tag === 'link')
-                a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled href=element.href)
+                a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled href=element.href data-fancybox=popup)
                     - if (element.icon_left)
                         .button__icon
                             i(data-feather=element.icon_left)

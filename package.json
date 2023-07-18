@@ -90,6 +90,7 @@
     "jquery-validation": "^1.19.5",
     "require-yaml": "^0.0.1",
     "script-loader": "^0.7.2",
+    "swiper": "6.8.2",
     "validate": "^5.2.0",
     "vanilla-lazyload": "^17.8.3"
   },
