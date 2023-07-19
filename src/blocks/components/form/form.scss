@@ -42,11 +42,18 @@
 
         &-banner {
             display: flex;
+            flex-wrap: wrap;
             align-items: flex-start;
 
             &__img {
                 min-width: 310px;
-                margin-right: 40px;
+                margin-right: 0;
+                margin-bottom: 30px;
+
+                @media (min-width: 992px) {
+                    margin-right: 40px;
+                    margin-bottom: 0;
+                }
             }
 
             &__title {
@@ -58,7 +65,11 @@
             }
 
             &__wrapper {
-                max-width: 560px;
+                max-width: 100%;
+
+                @media (min-width: 992px) {
+                    max-width: 560px;
+                }
             }
 
             .input {

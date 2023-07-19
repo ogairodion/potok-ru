@@ -4,11 +4,11 @@ PageList:
   - file: homepage.html
     ready: 100
   - file: company.html
-    ready: 1
+    ready: 100
   - file: practicum.html
-    ready: 1
+    ready: 100
   - file: demo.html
-    ready: 1
+    ready: 100
   - file: upload.html
     ready: 1
   - file: support.html

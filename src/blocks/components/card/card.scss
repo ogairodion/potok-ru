@@ -175,9 +175,13 @@
 
     &-banner {
         position: relative;
-        padding: 32px 64px 32px 48px;
+        padding: 32px 32px 24px 48px;
         border-left: 1px solid $black_general;
         margin-left: 30px;
+
+        @media (min-width: 768px) {
+            padding: 32px 64px 32px 48px;
+        }
 
         &__title {
             margin-bottom: 24px;

@@ -5,12 +5,28 @@
 
     &__wrapper {
         display: flex;
+        flex-wrap: wrap ;
         align-items: flex-start;
-        gap: 40px;
+
+        @media (min-width: 992px) {
+            gap: 40px;
+        }
     }
 
     &__column {
-        width: calc(50% - 40px);
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: calc(50% - 40px);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__btn {
