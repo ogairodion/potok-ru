@@ -9,14 +9,22 @@
 
     &__wrapper {
         display: flex;
-        gap: 40px;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            gap: 40px;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         flex: 1 auto;
-        width: calc(50% - 40px);
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 40px);
+        }
 
         &-link {
             display: block;
@@ -29,11 +37,19 @@
 
         &-description {
             max-width: 458px;
-            margin-bottom: 16px;
+            margin-bottom: 30px;
+
+            @media (min-width: 768px) {
+                margin-bottom: 16px;
+            }
         }
 
         &-btn {
-            margin-top: auto;
+            margin-top: 32px;
+
+            @media (min-width: 768px) {
+                margin-top: auto;
+            }
         }
     }
 }

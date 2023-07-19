@@ -5,11 +5,26 @@
 
     &__wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+            align-items: center;
+            flex-direction: row;
+        }
     }
 
     &__item {
-        margin-top: 32px;
+        width: 100%;
+        margin-bottom: 48px;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 64px);
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 100%;
+        }
 
         a {
             color: $blue_general;
@@ -35,8 +50,25 @@
     }
 
     &__list {
-        max-width: 360px;
-        margin-right: 37px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+
+        @media (min-width: 400px) {
+            margin-bottom: 96px; 
+        }
+
+        @media (min-width: 768px) {
+            gap: 0 64px;
+            margin-top: 32px;  
+        }
+
+        @media (min-width: 1024px) {
+            max-width: 384px;
+            margin-bottom: 0; 
+            margin-right: 13px;
+        }
     }
 
     &-horizontal {

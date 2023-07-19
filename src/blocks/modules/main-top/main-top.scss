@@ -13,16 +13,25 @@
 
         &__subtitle {
             max-width: 565px;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 120%;
             margin: 0 auto 32px;
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
         }
 
         &__btns {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             gap: 16px;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
         }
 
         &__img {

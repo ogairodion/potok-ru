@@ -21,3 +21,17 @@ header.header
     .header__bottom 
         .l-default 
             include ../../../blocks/components/header-menu/header-menu.pug
+    .header__mobile
+        .l-default
+            .header__mobile-top
+                .header__mobile-logo 
+                    +svgMono('logo')
+                .header__burger.header__burger-close
+                    i(data-feather="x")
+            .header__mobile-menu
+            .header__mobile-info
+                .header__mobile-btn
+                .header__mobile-contacts
+                    .header__mobile-phone
+                    .header__mobile-mail
+                    

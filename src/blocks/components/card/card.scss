@@ -51,8 +51,16 @@
     }
 
     &-news {
-        padding: 48px;
+        padding: 24px 16px;
         box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
+
+        @media (min-width: 400px) {
+            padding: 48px 24px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 48px;
+        }
         
         &__wrapper {
             max-width: 852px;
@@ -110,14 +118,26 @@
     }
 
     &-reviews {
-        padding: 48px;
+        padding: 24px 16px;
         box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
+
+        @media (min-width: 400px) {
+            padding: 48px 32px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 48px;
+        }
 
         &__top {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
             margin-bottom: 24px;
+
+            @media (min-width: 400px) {
+                align-items: center;
+            }
         }   
 
         &__photo {

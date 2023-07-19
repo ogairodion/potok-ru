@@ -15,6 +15,7 @@ mixin svgColor(name, modClass)
     use(xlink:href= 'img/sprite-color.svg#ico-color-' + name)
 
 mixin webp(names, typeImg, lazy, alt, sizes)
+  - console.log(sizes)
   - let altValue
   if alt == undefined 
     - altValue = ''

@@ -1,7 +1,11 @@
 .footer {
     color: $white;
     background: $blue_gradient;
-    padding: 80px 0 48px;
+    padding: 48px 0;
+
+    @media (min-width: 992px) {
+        padding: 80px 0 48px;
+    }
 
     &__logo {
         font-size: 26px;
@@ -15,6 +19,7 @@
     &__content {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         border-bottom: 1px solid rgba($white, .3);
         padding-bottom: 60px;
     }
@@ -34,14 +39,33 @@
     }
 
     &__column {
-        width: 33.3333%;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 33.3333%;
+        }
 
         &:first-child {
             max-width: 275px;
         }
 
         &:nth-child(2) {
-            margin: 0 auto; 
+            margin-top: 40px;
+
+            @media (min-width: 768px) {
+                margin: 0 auto; 
+            }
+        }
+
+        &:last-child {
+            @media (max-width: 991px) {
+                width: 100%;
+                max-width: 360px;
+            }
+
+            @media (max-width: 970px) {
+                margin-top: 80px;
+            }
         }
 
         &-telegram {
@@ -95,8 +119,13 @@
 
     &__bottom {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         padding-top: 24px;
+
+        @media (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+        }
 
         &-item {
             max-width: 275px;
@@ -113,7 +142,13 @@
 
         &-column {
             display: flex;
-            width: 33.3333%;
+            flex-direction: column;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                width: 33.3333%;
+            }
 
             &:first-child {
                 max-width: 275px;
@@ -123,13 +158,29 @@
                 margin: 0 auto;
             }
 
+            &:not(:last-child) {
+                margin-bottom: 24px;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+
             &:last-child {
                 .footer {
                     &__bottom {
                         &-item {
                             &:first-child {
                                 max-width: 191px;
-                                margin-right: 46px;
+                                margin-bottom: 24px;
+                                
+                                @media (min-width: 768px) {
+                                    margin-bottom: 0;
+                                }
+
+                                @media (min-width: 768px) {
+                                    margin-right: 46px;
+                                }
                             }
                         }
                     }

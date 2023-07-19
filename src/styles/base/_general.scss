@@ -25,6 +25,10 @@ body {
     color: $black_general;
     background: $white;
     overflow-y: hidden;
+
+    &.on-scroll {
+        margin-top: 76px;
+    }
 }
 
 .main {
