@@ -129,15 +129,27 @@
     &__contacts {
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
         border: 1px solid $grey_disabled;
         border-top: none;
         padding: 48px 24px;
 
+        @media (min-width: 992px) {
+            flex-direction: row;
+        }
+
         &-title {
             max-width: 560px;
+            margin-bottom: 24px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 0;
+            }
         }
 
         &-info {
+            display: flex;
+            flex-direction: column;
             max-width: 460px;
         }
 
