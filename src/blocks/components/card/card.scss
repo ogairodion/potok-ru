@@ -316,11 +316,17 @@
         &__content {
             display: flex;
             align-items: flex-start;
+            flex-wrap: wrap;
             gap: 40px;
         }
 
         &__img, &__info {
-            width: calc(50% - 40px);
+            width: 100%;
+            max-width: 560px;
+
+            @media (min-width: 991px) {
+                width: calc(50% - 40px);
+            }
         }
 
         &__img {
@@ -344,7 +350,9 @@
         &:nth-child(2n) {
             .card-about {
                 &__content {
-                    flex-direction: row-reverse;
+                    @media (min-width: 991px) {
+                        flex-direction: row-reverse;
+                    }
                 }
             }
         }

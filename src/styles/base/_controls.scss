@@ -1,7 +1,16 @@
 .font {
   &-h1 {
-    font-size: 46px;
-    line-height: 130%;
+    font-size: 32px;
+    line-height: 120%;
+
+    @media (max-width: 400px) {
+      word-wrap: break-word;
+    }
+
+    @media (min-width: 400px) {
+      font-size: 46px;
+      line-height: 130%;
+    }
 
     @media (min-width: 768px) {
       font-size: 64px;
@@ -10,8 +19,13 @@
   }
 
   &-h2 {
-    font-size: 32px;
-    line-height: 135%;
+    font-size: 26px;
+    line-height: 120%;
+
+    @media (min-width: 400px) {
+      font-size: 32px;
+      line-height: 135%;
+    }
 
     @media (min-width: 768px) {
       font-size: 42px;
@@ -86,8 +100,13 @@
   }
 
   &-accent {
-    font-size: 26px;
-    line-height: 130%;
+    font-size: 22px;
+    line-height: 120%;
+
+    @media (min-width: 400px) {
+      font-size: 26px;
+      line-height: 130%;
+    }
 
     @media (min-width: 768px) {
       font-size: 36px;
