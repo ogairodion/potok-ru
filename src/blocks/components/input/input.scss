@@ -14,17 +14,13 @@
     &__label {
         order: 0;
         opacity: 1;
+        display: block;
         color: rgba($black_dark, .6);
         margin-bottom: 8px;
         animation: show .4s ease;
 
         span {
             color: $red;
-        }
-
-        &.hidden {
-            opacity: 0;
-            display: block !important; 
         }
     }
 

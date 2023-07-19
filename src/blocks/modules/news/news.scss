@@ -17,15 +17,9 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 32px;
+        gap: 12px 16px;
 
         .tag {
-            &:not(:last-of-type) {
-                margin-right: 16px;
-            }
-
-            &:last-of-type {
-                margin-right: 32px;
-            }
         }
     }
 }

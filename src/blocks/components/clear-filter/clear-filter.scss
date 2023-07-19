@@ -1,16 +1,26 @@
 .clear {
-    display: flex;
-    align-items: center;
-    max-width: fit-content;
-    cursor: pointer;
-    border: 1px solid $black_general;
-    border-radius: 4px;
-    padding: 4px 32px;
+    width: 100%;
+    max-width: 100%;
 
     @media screen and (min-width: 992px) {
+        width: auto;
+        max-width: fit-content;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        max-width: fit-content;
+        cursor: pointer;
+        border: 1px solid $black_general;
         border-radius: 4px;
-        border: none;
-        padding: 0;
+        padding: 4px 32px;
+    
+        @media screen and (min-width: 992px) {
+            border-radius: 4px;
+            border: none;
+            padding: 0;
+        }
     }
 
     &__icon {
