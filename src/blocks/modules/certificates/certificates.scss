@@ -6,10 +6,18 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 40px 0;
+
+        @media (min-width: 992px) {
+            gap: 40px;
+        }
     }
 
     .card-document {
-        width: calc(50% - 40px);
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: calc(50% - 40px);
+        }
     }
 }

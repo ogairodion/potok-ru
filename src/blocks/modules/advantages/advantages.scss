@@ -78,12 +78,29 @@
 
         &__items {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 40px;
+            gap: 48px 0;
+
+            @media (min-width: 768px) {
+                gap: 48px;
+            }
+
+            @media (min-width: 992px) {
+                gap: 40px;
+            }
         }
 
         &__item {
-            width: calc(33.3333% - 40px);
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: calc(33.3333% - 48px);
+            }
+
+            @media (min-width: 992px) {
+                width: calc(33.3333% - 40px);
+            }
 
             &-icon {
                 display: flex;
