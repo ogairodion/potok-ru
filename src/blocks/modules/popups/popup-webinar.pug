@@ -1,0 +1,77 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-webinar#popup-webinar
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Регистрация участия в вебинаре TEPLOOV-2023
+        form.form
+            .form__caption.font-p-1 Ваши данные
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    reqiured: true,
+                    required_text: 'ФИО <span>*</span>',
+                    placeholder: 'ФИО *',
+                })
+
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    required_text: 'Ваш e-mail <span>*</span>',
+                    placeholder: 'Ваш e-mail *',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'company',
+                    reqiured: true,
+                    required_text: 'Название организации <span>*</span>',
+                    placeholder: 'Название организации *',
+                })
+
+                +input({
+                    type: 'phone',
+                    name: 'phone',
+                    reqiured: true,
+                    required_text: 'Номер телефона <span>*</span>',
+                    placeholder: '+7 (_ _ _) _ _ _  _ _   _ _  *',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'city',
+                    reqiured: true,
+                    required_text: 'Ваш город <span>*</span>',
+                    placeholder: 'Ваш город *',
+                })
+
+                +input({
+                    type: 'date',
+                    name: 'date',
+                    required_text: 'Желаемая дата проведения',
+                    placeholder: 'Желаемая дата проведения',
+                })
+
+            .form__caption.font-p-1 Темы и вопросы, которые хотелось бы осветить на практикуме
+            .form__message
+                +input({
+                    type: 'textarea',
+                    name: 'comment',
+                    reqiured: true,
+                    placeholder: 'Сообщение',
+                    max: '5000',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

@@ -1,5 +1,6 @@
 .popup {
     display: none;
+    width: 100%;
     max-width: 1160px;
     background: $white;
     padding: 96px 80px;
@@ -34,6 +35,14 @@
         margin-top: 16px;
     }
 
+    &-thanks {
+        .popup {
+            &__content {
+                max-width: 760px;
+            }
+        }
+    }
+
     &-cookies {
         max-width: 1362px;
         padding: 32px;
@@ -58,6 +67,10 @@
                 }
             }
         }
+    }
+
+    button[data-fancybox-close] {
+        margin-top: 48px;
     }
 
     .form {

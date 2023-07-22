@@ -21,14 +21,14 @@ gulp.task("sprite:svg:mono", async function () {
                 pretty: true
             },
             plugins: [{
-                removeDesc: true
-            }, {
                 cleanupIDs: true
             }, {
                 mergePaths: false
             }, {
                 removeViewBox: false
-            }]
+            }, 
+            'cleanupListOfValues'
+            ]
         }))
         .pipe(rename({
             prefix: "ico-mono-"

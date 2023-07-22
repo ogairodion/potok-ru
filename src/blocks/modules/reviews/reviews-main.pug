@@ -26,7 +26,7 @@ include ../.././components/button/button.pug
 section.reviews
     .l-default
         h2.font-h2 Наши отзывы
-        .reviews__subtitle.font-p-1 Вы также можете <a href="">оставить</a> отзыв о своем опыте использования нашего пакета программ
+        .reviews__subtitle.font-p-1 Вы также можете <a href="#popup-reviews" data-fancybox>оставить</a> отзыв о своем опыте использования нашего пакета программ
         .reviews__items 
             each reviews_card in reviews_cards_main 
                 +card-reviews({

@@ -5,6 +5,7 @@ mixin button(element)
     - var font_size = element.font_size ? 'font-' + element.font_size : '';
     - var font_weight = element.font_weight ? 'font-' + element.font_weight : '';
     - var popup = element.popup;
+    - var close_popup = element.close_popup ? 'data-fancybox-close' : ''; 
     
     - if (element.typeBtn !== 'arrow')
         .button
@@ -24,19 +25,32 @@ mixin button(element)
                         .button__icon
                             +svgMono(element.icon)
             - else
-                button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled type=element.type)
-                    - if (element.icon_left)
-                        .button__icon
-                            i(data-feather=element.icon_left)
-                    - if (element.text)
-                        .button__text= element.text
-                    - if (element.icon_right)
-                        .button__icon
-                            i(data-feather=element.icon_right)
-                    - if (element.icon)
-                        .button__icon
-                            +svgMono(element.icon)
-    
+                - if (element.close_popup)
+                    button.button__container(class=[color, type, size, font_size, font_weight] data-fancybox-close disabled=element.disabled type=element.type)
+                        - if (element.icon_left)
+                            .button__icon
+                                i(data-feather=element.icon_left)
+                        - if (element.text)
+                            .button__text= element.text
+                        - if (element.icon_right)
+                            .button__icon
+                                i(data-feather=element.icon_right)
+                        - if (element.icon)
+                            .button__icon
+                                +svgMono(element.icon)
+                - else
+                    button.button__container(class=[color, type, size, font_size, font_weight] data-fancybox-close disabled=element.disabled type=element.type)
+                        - if (element.icon_left)
+                            .button__icon
+                                i(data-feather=element.icon_left)
+                        - if (element.text)
+                            .button__text= element.text
+                        - if (element.icon_right)
+                            .button__icon
+                                i(data-feather=element.icon_right)
+                        - if (element.icon)
+                            .button__icon
+                                +svgMono(element.icon)
     - else 
         button.button(class='button-' + element.typeBtn class='button-' + element.typeBtn + '-' + element.color type=element.type)
             .button__icon   
