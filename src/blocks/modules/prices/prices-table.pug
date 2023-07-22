@@ -1,0 +1,94 @@
+include ../.././components/count/count.pug
+
+.prices__table
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-title.font-uppercase.font-small Название программы пакета
+        .prices__table-td
+            .prices__table-title.font-uppercase.font-small Количество рабочих мест
+        .prices__table-td.prices__table-td--2x(style="padding: 0;") 
+            .prices__table-title.prices__table-title--centered.font-uppercase.font-small Стоимость вашего заказа + 1 год сопровождения
+            .prices__table-title.font-uppercase.font-small локальная версия программы
+            .prices__table-title.font-uppercase.font-small сетевая версия программы
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number ПОТОК
+        .prices__table-td       
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 47 955 руб 
+        .prices__table-td  
+            .prices__table-price.font-number 47 955 руб
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number RTI
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number VSV
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number KALOR
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number BOLER
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number STOL
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td
+            .prices__table-text.font-number VIBROS
+        .prices__table-td   
+            +count()
+        .prices__table-td  
+            .prices__table-price.font-number 0
+        .prices__table-td  
+            .prices__table-price.font-number 0
+    .prices__table-tr
+        .prices__table-td.prices__table-td--w100
+            .prices__table-title.font-uppercase.font-small ключ электронной защиты
+        .prices__table-td.prices__table-td--w50 
+            .prices__table-price.font-number 2 500 руб
+        .prices__table-td.prices__table-td--w50 
+            .prices__table-price.font-number 3 500 руб
+    .prices__table-tr
+        .prices__table-td.prices__table-td--w100
+            .prices__table-title.font-uppercase.font-small итоговая стоимость пакета
+        .prices__table-td.prices__table-td--w50 
+            .prices__table-price.font-number.text--blue 2 500 руб
+            .prices__table-price.font-tab.text--blue Заказать версию
+        .prices__table-td.prices__table-td--w50
+            .prices__table-price.font-number.text--blue 3 500 руб
+            .prices__table-price.font-tab.text--blue Заказать версию
+
+
+

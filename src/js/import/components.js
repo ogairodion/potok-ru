@@ -5,3 +5,4 @@ import "%components%/accordeon/accordeon";
 import "%components%/input/input";
 import "%components%/dropdown/dropdown";
 import "%components%/tabs/tabs";
+import "%components%/count/count";

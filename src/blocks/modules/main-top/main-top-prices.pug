@@ -1,0 +1,13 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Цены' }
+        ])
+        h1.main-top__title.font-h1.font-b Цены
+        .main-top__img 
+            +webp(['main-top/9'], 'jpg')
+        .main-top__subtitle.font-accent Укажите в таблице количество рабочих мест, чтобы <span>узнать стоимость программы TEPLOOV или восстановление сопровождения*</span>
+        

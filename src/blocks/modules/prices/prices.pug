@@ -1,0 +1,30 @@
+include ../.././components/tabs/tabs.pug
+include ../.././components/radio-button/radio-button.pug
+
+-
+    const tabs = [
+        { text: 'Покупка программы', value: 'Покупка программы', active: 'active' },
+        { text: 'Восстановление сопровождения', value: 'Восстановление сопровождения' },
+    ]
+
+section.prices
+    .l-default 
+        +tabs(tabs)
+        each tab_content, index in tabs
+            .prices__content.tabs__content(data-value=tab_content.value)
+                .prices__types
+                    .prices__types-title.font-h4 Выберите тип ключа<span>*<span>
+                    .prices__type
+                        +radio-button({
+                            name: 'type-' + index,
+                            text: 'USB ключ',
+                            checked: true,
+                        })
+                    .prices__type
+                        +radio-button({
+                            name: 'type-' + index,
+                            text: 'Программный ключ',
+                        })
+                include prices-table.pug
+                .prices__message.font-small *Стоимость указана в рублях. НДС не облагается.
+

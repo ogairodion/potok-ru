@@ -1,0 +1,36 @@
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    
+    &-minus, &-plus {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        min-height: 20px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            width: 100%;
+            height: .1px;
+            background: $black_general;
+        }
+    }
+
+    &-plus {
+        span {
+            &:nth-child(2) {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+}
