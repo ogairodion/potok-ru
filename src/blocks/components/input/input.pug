@@ -3,11 +3,13 @@ mixin input(element)
 
     - if (element.type !== 'textarea')
         .input(data-required=element.required class=element.class)
-            label.input__label.font-small.hidden!= element.required_text
+            - if (element.required_text)
+                label.input__label.font-small.hidden!= element.required_text
             input.font-form(type=element.type placeholder=element.placeholder required=element.required name=element.name class=phone)
     - else 
         .input(data-required=element.required)
-            label.input__label.font-small.hidden= element.placeholder
+            - if (element.required_text)
+                label.input__label.font-small.hidden= element.required_text
             label.error
             textarea.font-form(type=element.type placeholder=element.placeholder required=element.required data-max=element.max name=element.name)
             .input__count.font-small

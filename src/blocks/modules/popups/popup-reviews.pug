@@ -1,0 +1,64 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-reviews#popup-reviews
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Оставить отзыв о пакете программ TEPLOOV
+        .popup__description Вы можете оставить свои данные или написать отзыв анонимно.В таком случае, он будет важен для нас, но опубликовать его мы не сможем.
+        form.form
+            .form__caption.font-p-1 Ваши данные
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    placeholder: 'ФИО',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'company',
+                    placeholder: 'Компания',
+                })
+            .form__caption.font-p-1 Какой программой TEPLOOV вы пользовались
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    placeholder: 'Название',
+                })
+            .form__caption.font-p-1 Срок использования
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    placeholder: 'Например: 02.02.2021 — настоящее время',
+                })
+            .form__caption.font-p-1 Достоинства 
+            .form__message
+                +input({
+                    type: 'textarea',
+                    name: 'comment',
+                    placeholder: 'Достоинства ',
+                    max: '5000',
+                })
+            .form__caption.font-p-1 Недостатки 
+            .form__message
+                +input({
+                    type: 'textarea',
+                    name: 'comment',
+                    placeholder: 'Недостатки ',
+                    max: '5000',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

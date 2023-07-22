@@ -1,0 +1,42 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-question#popup-question
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Задать вопрос о пакете программ TEPLOOV
+        .popup__description Вы можете оставить свои данные или написать нам анонимно, при этом оставив свой e-mail.
+        form.form
+            .form__caption.font-p-1 Ваши данные
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    placeholder: 'ФИО',
+                })
+
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    placeholder: 'Ваш e-mail',
+                })
+            .form__caption.font-p-1 Ваш вопрос
+            .form__inputs
+                +input({
+                    type: 'textarea',
+                    name: 'name',
+                    placeholder: '',
+                    max: '5000',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

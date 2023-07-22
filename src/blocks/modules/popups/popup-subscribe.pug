@@ -1,0 +1,24 @@
+.popup.popup-subscribe#popup-subscribe
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Подписка на новости
+        .popup__description.font-p-3 Подпишитесь на нашу рассылку, чтобы первыми узнавать об обновлениях программ пакета Teploov
+        form.form
+            .form__inputs
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    required_text: 'E-mail',
+                    placeholder: 'E-mail',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

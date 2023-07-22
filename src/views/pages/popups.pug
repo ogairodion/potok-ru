@@ -1,0 +1,47 @@
+extends ../layouts/default
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = ""
+
+block content
+  include ../../blocks/modules/header/header.pug
+  main.main
+    .popup-examples
+      .l-default
+        .popup-example
+          a.font-p-1(href="#popup-cookies" data-fancybox) Пример попапа Cookies
+          include ../../blocks/modules/popups/popup-cookies.pug
+        .popup-example
+          a.font-p-1(href="#popup-registration" data-fancybox) Пример попапа Регистрация
+          include ../../blocks/modules/popups/popup-registration.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks" data-fancybox) Пример попапа Спасибо за регистрацию
+          include ../../blocks/modules/popups/popup-thanks.pug
+        .popup-example
+          a.font-p-1(href="#popup-subscribe" data-fancybox) Пример попапа Подписаться на новости
+          include ../../blocks/modules/popups/popup-subscribe.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks-subscribe" data-fancybox) Пример попапа Спасибо за подписку
+          include ../../blocks/modules/popups/popup-thanks-subscribe.pug
+        .popup-example
+          a.font-p-1(href="#popup-reviews" data-fancybox) Пример попапа Оставить отзыв
+          include ../../blocks/modules/popups/popup-reviews.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks-reviews" data-fancybox) Пример попапа Спасибо за отзыв
+          include ../../blocks/modules/popups/popup-thanks-reviews.pug
+        .popup-example
+          a.font-p-1(href="#popup-question" data-fancybox) Пример попапа Задать вопрос
+          include ../../blocks/modules/popups/popup-question.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks-question" data-fancybox) Пример попапа Спасибо за вопрос
+          include ../../blocks/modules/popups/popup-thanks-question.pug
+        .popup-example  
+          a.font-p-1(href="https://www.youtube.com/watch?v=XAvtrZISYrY" data-fancybox) Пример видео в попапе
+
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

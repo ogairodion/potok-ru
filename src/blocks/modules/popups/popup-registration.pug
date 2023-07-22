@@ -1,0 +1,60 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-registration#popup-registration
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Регистрация участия в авторском практикуме TEPLOOV
+        form.form
+            .form__caption.font-p-1 Ваши данные
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    reqiured: true,
+                    required_text: 'Имя <span>*</span>',
+                    placeholder: 'Имя *',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'company',
+                    required_text: 'Компания',
+                    placeholder: 'Компания',
+                })
+
+                +input({
+                    type: 'phone',
+                    name: 'phone',
+                    reqiured: true,
+                    required_text: 'Номер телефона <span>*</span>',
+                    placeholder: '+7 (_ _ _) _ _ _  _ _   _ _  *',
+                })
+
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    required_text: 'E-mail',
+                    placeholder: 'E-mail',
+                })
+            .form__caption.font-p-1 Темы и вопросы, которые хотелось бы осветить на практикуме
+            .form__message
+                +input({
+                    type: 'textarea',
+                    name: 'comment',
+                    reqiured: true,
+                    placeholder: 'Сообщение',
+                    max: '5000',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

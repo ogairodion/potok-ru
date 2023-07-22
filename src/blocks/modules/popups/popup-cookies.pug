@@ -1,0 +1,15 @@
+include ../../../blocks/components/button/button.pug
+
+.popup.popup-cookies#popup-cookies
+    .popup-cookies__text.font-p-1 Мы используем файлы cookie, чтобы улучшить ваш опыт. Продолжая посещать этот сайт, вы соглашаетесь на использование нами файлов cookie.
+    .popup-cookies__btns
+        +button({
+            text: 'Принять',
+            icon: 'click',
+            color: 'blue-general',
+        })
+        +button({
+            text: 'Узнать подробнее',
+            icon_right: 'menu',
+            color: 'white',
+        })
