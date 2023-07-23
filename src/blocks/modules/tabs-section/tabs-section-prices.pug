@@ -1,0 +1,18 @@
+include ../../../blocks/components/tabs/tabs.pug
+include ../../../blocks/components/card/card-document.pug
+
+include tabs-section-data.pug
+
+section.tabs-section.tabs-container
+    .l-default 
+        .tabs-section__title.font-h2 Подробности покупки программы
+        +tabs(tabs_prices)
+        .tabs-section__content
+            each card, index in tabs_prices
+                - if (index === 0)
+                    include tab-section-prices-1
+                - if (index === 1)
+                    include tab-section-prices-2
+                - if (index === 2)
+                    include tab-section-prices-3
+

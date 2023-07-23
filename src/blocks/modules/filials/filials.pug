@@ -1,0 +1,9 @@
+include ../../components/accordeon/accordeon.pug
+include filials-data.pug
+
+section.filials
+    .l-default 
+        h2.filials__title.font-h2 Официальные представители в вашем регионе
+        +accordeon({
+            element: filials,
+        })

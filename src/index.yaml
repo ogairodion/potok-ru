@@ -25,6 +25,8 @@ PageList:
     ready: 100
   - file: program.html
     ready: 100
+  - file: prices.html
+    ready: 100
   - file: 404.html
     ready: 100
   - file: popups.html

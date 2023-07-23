@@ -5,6 +5,10 @@
         margin-bottom: 32px;
     }
 
+    &__title {
+        margin-bottom: 48px;
+    }
+
     .tabs__content {
         display: none;
         animation: show .4s ease;
@@ -31,6 +35,43 @@
 
         .card-document {
             width: calc(50% - 40px);
+        }
+    }
+
+    &__pay {
+        &-top {
+            margin-bottom: 48px;
+        }
+
+        &-info {
+            p {
+                font-weight: 600;
+            }
+        }
+
+        &-columns {
+            display: flex;
+            gap: 125px;
+        }
+    }
+
+    &__delivery {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        ul {
+            margin-top: 0;
+        }
+
+        &-caption {
+            font-weight: 600;
         }
     }
 }

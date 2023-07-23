@@ -7,24 +7,26 @@ include ../.././components/radio-button/radio-button.pug
         { text: 'Восстановление сопровождения', value: 'Восстановление сопровождения' },
     ]
 
-section.prices
+section.prices.tabs-container
     .l-default 
         +tabs(tabs)
+        .prices__types
+            .prices__types-title.font-h4 Выберите тип ключа<span>*<span>
+            .prices__type
+                +radio-button({
+                    name: 'type-' + index,
+                    text: 'USB ключ',
+                    checked: true,
+                })
+            .prices__type
+                +radio-button({
+                    name: 'type-' + index,
+                    text: 'Программный ключ',
+                })
         each tab_content, index in tabs
-            .prices__content.tabs__content(data-value=tab_content.value)
-                .prices__types
-                    .prices__types-title.font-h4 Выберите тип ключа<span>*<span>
-                    .prices__type
-                        +radio-button({
-                            name: 'type-' + index,
-                            text: 'USB ключ',
-                            checked: true,
-                        })
-                    .prices__type
-                        +radio-button({
-                            name: 'type-' + index,
-                            text: 'Программный ключ',
-                        })
-                include prices-table.pug
-                .prices__message.font-small *Стоимость указана в рублях. НДС не облагается.
+            .swiper-container.prices-slider.tabs__content(data-value=tab_content.value)
+                .swiper-wrapper
+                    .swiper-slide.prices__content
+                        include prices-table.pug
+                        .prices__message.font-small *Стоимость указана в рублях. НДС не облагается.
 

@@ -19,6 +19,7 @@ module.exports = {
     },
     entry: {
         main: "./src/js/index.js",
+        prices: "./src/js/prices.js",
     },
 
     output: {
