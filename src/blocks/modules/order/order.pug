@@ -1,0 +1,36 @@
+include ../.././components/count/count.pug
+include ../.././components/button/button.pug
+include order-data.pug 
+
+section.order 
+    .l-default 
+        .order__wrapper
+            .order__top
+                .order__top-text Ваш заказ
+                .order__top-remove Удалить все
+            .order__items
+                each order in orders
+                    .order__item
+                        .order__item-img
+                            +webp(order.img, 'jpg')
+                        .order__item-name= order.title
+                        .order__item-question
+                            .order__message
+                                .order__message-text= order.message
+                                .order__message-close   
+                                    i(data-feather="x")
+                        .order__item-count
+                            +count()
+                        .order__item-price= order.price
+                .order__bottom
+                    .order__item
+                        .order__item-text Сетевой ключ
+                        .order__item-price 3 500 руб
+                .order__result
+                    .order__item
+                        .order__item-text Итого
+                        .order__item-price 63 455 руб
+        +button({
+            text: 'Оформить заказ',
+            color: 'blue-general',
+        })

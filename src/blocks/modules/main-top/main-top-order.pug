@@ -1,0 +1,12 @@
+include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+
+section.main-top
+    .l-default 
+        +breadcrumbs([
+            { href: '/', text: 'Главная' },
+            { href: '', text: 'Цены' },
+            { href: '', text: 'Содержание заказа' }
+        ])
+        h1.main-top__title.font-h1 Содержание заказа
+        .main-top__subtitle.font-accent Пожалуйста, внимательно проверьте содержание заказа.<span>Если данные корректны,  нажмите кнопку «оформление заказа»</span>
+        
