@@ -1,0 +1,86 @@
+include ../.././components/radio-button/radio-button.pug
+include ../.././components/input/input.pug
+include ../.././components/button/button.pug
+
+section.pay
+    .l-default 
+        form.form
+            .pay__choose
+                h3.pay__choose-title.font-h3 Выберите способ доставки <span>*</span>
+                .pay__choose-items  
+                    +radio-button({
+                        name: 'delivery',
+                        text: 'По России (1500 руб)',
+                        checked: true,
+                    })
+
+                    +radio-button({
+                        name: 'delivery',
+                        text: 'По СНГ (3500 руб)',
+                    })
+
+                    +radio-button({
+                        name: 'delivery',
+                        text: 'По миру (5000 руб)',
+                    })
+
+                    +radio-button({
+                        name: 'delivery',
+                        text: 'По Москве и Спб (5000 руб)',
+                    })
+            h3.form__title.font-h3 Заполните форму <span>*</span>
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'name',
+                    reqiured: true,
+                    required_text: 'ФИО <span>*</span>',
+                    placeholder: 'ФИО *',
+                })
+
+                +input({
+                    type: 'phone',
+                    name: 'phone',
+                    reqiured: true,
+                    required_text: 'Номер телефона <span>*</span>',
+                    placeholder: '+7 (_ _ _) _ _ _  _ _   _ _  *',
+                })
+
+                +input({
+                    type: 'email',
+                    name: 'email',
+                    required_text: 'Ваш e-mail <span>*</span>',
+                    placeholder: 'Ваш e-mail *',
+                })
+
+                +input({
+                    type: 'text',
+                    name: 'address',
+                    required_text: 'Ваш адрес <span>*</span>',
+                    placeholder: 'Ваш адрес *',
+                })
+            .form__payments 
+                h3.form__payments-title.font-h3 Выберите способ оплаты *
+                .form__payments-btns 
+                    +button({
+                        text: 'Онлайн-платеж',
+                        color: 'blue-general',
+                    })
+
+                    +button({
+                        text: 'Безналичный расчет (предоплата)',
+                        color: 'white',
+                    })
+        .pay__icons
+            h4.pay__icons-title.font-h4.font-b Мы принимаем
+            .pay__icons-imgs
+                .pay__icons-img    
+                    img(src="img/icons/visa.svg")
+                .pay__icons-img    
+                    img(src="img/icons/mastercard.svg")
+                .pay__icons-img    
+                    img(src="img/icons/qiwi.svg")
+                .pay__icons-img    
+                    img(src="img/icons/webmoney.svg")
+
+

@@ -1,0 +1,88 @@
+.pay {
+    padding-top: 0;
+
+    &__choose {
+        margin-bottom: 48px;
+        
+        &-title {
+            margin-bottom: 48px;
+        
+            span {
+                color: $red;
+            }
+        }
+
+        .radio-button {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .form {
+        max-width: 560px;
+
+        &__title {
+            margin-bottom: 32px;
+
+            span {
+                color: $red;
+            }
+        }
+
+        &__inputs {
+            margin-bottom: 48px;
+        }
+
+        .input {
+            max-width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &__payments {
+            &-title {
+                margin-bottom: 32px;
+            }
+
+            &-btns {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                .button {
+                    display: flex;
+                    flex: 1 1 auto;
+                    max-width: 100%;
+
+                    &__container {
+                        flex: 1 1 auto;
+                        max-width: 100%;
+                        padding: 24px;
+                    }
+
+                    &__text {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    &__icons {
+        margin-top: 48px;
+
+        &-title {
+            margin-bottom: 20px;
+        }
+
+        &-imgs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+    }
+}

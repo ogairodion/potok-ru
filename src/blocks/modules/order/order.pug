@@ -6,30 +6,33 @@ section.order
     .l-default 
         .order__wrapper
             .order__top
-                .order__top-text Ваш заказ
-                .order__top-remove Удалить все
+                .order__top-text.font-h3 Ваш заказ
+                .order__top-remove.font-small Удалить все
             .order__items
                 each order in orders
                     .order__item
                         .order__item-img
-                            +webp(order.img, 'jpg')
-                        .order__item-name= order.title
-                        .order__item-question
-                            .order__message
-                                .order__message-text= order.message
-                                .order__message-close   
-                                    i(data-feather="x")
+                            +webp([order.img], 'jpg')
+                        .order__item-info
+                            .order__item-name.font-number= order.title
+                            .order__item-question
+                                .order__question-icon       
+                                    +svgMono('info')
+                                .order__message
+                                    .order__message-text.font-form= order.message
+                                    .order__message-close   
+                                        i(data-feather="x")
                         .order__item-count
                             +count()
-                        .order__item-price= order.price
+                        .order__item-price.font-number= order.price
                 .order__bottom
                     .order__item
-                        .order__item-text Сетевой ключ
-                        .order__item-price 3 500 руб
+                        .order__item-text.font-number Сетевой ключ
+                        .order__item-price.font-number 3 500 руб
                 .order__result
                     .order__item
-                        .order__item-text Итого
-                        .order__item-price 63 455 руб
+                        .order__item-text.font-number Итого
+                        .order__item-price.font-number 63 455 руб
         +button({
             text: 'Оформить заказ',
             color: 'blue-general',
