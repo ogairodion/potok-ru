@@ -2,7 +2,7 @@
     padding-top: 0;
     
     .tabs {
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
 
     &__title {
@@ -34,7 +34,12 @@
         }
 
         .card-document {
-            width: calc(50% - 40px);
+            width: 100%;
+            max-width: 560px;
+
+            @media (min-width: 1024px) {
+                width: calc(50% - 40px);
+            }
         }
     }
 
@@ -51,7 +56,13 @@
 
         &-columns {
             display: flex;
-            gap: 125px;
+            flex-direction: column;
+            gap: 48px 0;
+
+            @media (min-width: 1024px) {
+                flex-direction: row;
+                gap: 125px;
+            }
         }
     }
 

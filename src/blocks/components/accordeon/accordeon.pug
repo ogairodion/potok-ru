@@ -8,7 +8,7 @@ mixin accordeon(element)
                         .accordeon__arrow   
                             i(data-feather="chevron-down")
                     - if (item.content)
-                        .accordeon__content.font-p-2= item.content
+                        .accordeon__content.font-p-2!= item.content
                     - if (item.table)
                         .accordeon__content
                             .accordeon__table

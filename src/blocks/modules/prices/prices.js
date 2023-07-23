@@ -12,7 +12,6 @@ if (pricesSliders.length) {
             resistance: true,
             resistanceRatio: 0,
             observer: true,
-            observeParents: true,
         });
     });
 }

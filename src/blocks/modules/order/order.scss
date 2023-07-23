@@ -2,10 +2,14 @@
     padding-top: 0;
 
     &__wrapper {
-        max-width: 760px;
+        max-width: 384px;
         box-shadow: 0px 0px 35px 0px rgba(0, 120, 191, 0.08);
         padding: 32px 24px;
         margin-bottom: 48px;
+
+        @media (min-width: 768px) {
+            max-width: 760px;
+        }
     }
 
     &__top {
@@ -40,7 +44,7 @@
 
         &-img {
             position: relative;
-            width: 58px;
+            min-width: 58px;
             height: 58px;
             overflow: hidden;
             border-radius: 4px;
@@ -60,18 +64,41 @@
         &-info {
             position: relative;
             display: flex;
-            align-items: center;
-            min-width: 114px;
-            margin-right: 88px;
+            flex-direction: column-reverse;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+                min-width: 114px;
+                margin-right: 88px;
+            }
         }
 
         .count {
-            margin: 0 auto;
+            @media (min-width: 768px) {
+                margin: 0 auto;
+            }
         }
 
         &-price {
             margin-left: auto;
-            margin-right: 120px;
+            margin-left: 35px;
+
+            @media (min-width: 768px) {
+                margin-right: 120px;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
         }
     }
 
@@ -81,8 +108,12 @@
             align-items: center;
             justify-content: center;
             font-size: 25px;
-            margin-left: 4px;
+            margin-left: auto;
             cursor: pointer;
+
+            @media (min-width: 768px) {
+                margin-left: 4px;
+            }
 
             svg {
                 fill: rgba($black_general, .6);
@@ -93,15 +124,23 @@
     &__message {
         position: absolute;
         bottom: 100%;
-        left: 50%;
+        left: 0;
         z-index: 1;
         display: none;
-        width: 500px;
         border-radius: 16px 16px 16px 0px;
         box-shadow: 6px 6px 30px 0px rgba(72, 102, 175, 0.10);
         background: $white;
         padding: 24px;
         animation: show .4s ease;
+
+        @media (min-width: 600px) {
+            left: 50%;
+            width: 300px;
+        }
+
+        @media (min-width: 768px) {
+            width: 500px;
+        }
         
         &-close {
             position: absolute;
@@ -118,6 +157,10 @@
     &__bottom {
         .order__item {
             padding: 32px 0;
+
+            &-price {
+                margin-left: auto;
+            }
         }
     }
 
@@ -127,6 +170,10 @@
             padding: 32px 0;
             padding-bottom: 0;
             border-bottom: none;
+
+            &-price {
+                margin-left: auto;
+            }
         }
     }
 }

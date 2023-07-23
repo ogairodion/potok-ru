@@ -13,17 +13,18 @@ section.order
                     .order__item
                         .order__item-img
                             +webp([order.img], 'jpg')
-                        .order__item-info
-                            .order__item-name.font-number= order.title
-                            .order__item-question
-                                .order__question-icon       
-                                    +svgMono('info')
-                                .order__message
-                                    .order__message-text.font-form= order.message
-                                    .order__message-close   
-                                        i(data-feather="x")
-                        .order__item-count
-                            +count()
+                        .order__item-wrapper
+                            .order__item-info
+                                .order__item-name.font-number= order.title
+                                .order__item-question
+                                    .order__question-icon       
+                                        +svgMono('info')
+                                    .order__message
+                                        .order__message-text.font-form= order.message
+                                        .order__message-close   
+                                            i(data-feather="x")
+                            .order__item-count
+                                +count()
                         .order__item-price.font-number= order.price
                 .order__bottom
                     .order__item
