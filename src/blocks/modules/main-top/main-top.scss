@@ -185,4 +185,12 @@
             padding: 12px 10px;
         }
     }
+
+    &-program {
+        .main-top {
+            &__subtitle {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }

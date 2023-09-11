@@ -1,4 +1,5 @@
 include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../../blocks/components/button/button.pug
 
 section.main-top
     .l-default 
@@ -9,4 +10,9 @@ section.main-top
         h1.main-top__title.font-h1.font-b Состав пакета TEPLOOV 
         .main-top__img 
             +webp(['main-top/1'], 'jpg')
-        
+        +button({
+            tag: 'link',
+            text: 'Перейти к покупке',
+            color: 'blue-general',
+            icon_right: 'arrow-right',
+        })

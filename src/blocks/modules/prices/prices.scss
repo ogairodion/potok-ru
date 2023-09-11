@@ -83,6 +83,12 @@
                 padding: 24px 0; 
             }
         }
+
+        &-price {
+            &:last-child {
+                margin-top: 16px;
+            }
+        }
     }
 
     &__message {

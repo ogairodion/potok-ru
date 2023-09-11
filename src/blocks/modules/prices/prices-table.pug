@@ -1,4 +1,5 @@
 include ../.././components/count/count.pug
+include ../.././components/button/button.pug
 
 .prices__table
     .prices__table-tr
@@ -85,10 +86,20 @@ include ../.././components/count/count.pug
             .prices__table-title.font-uppercase.font-small итоговая стоимость пакета
         .prices__table-td.prices__table-td--w50 
             .prices__table-price.font-number.text--blue 2 500 руб
-            .prices__table-price.font-tab.text--blue Заказать версию
+            .prices__table-price.font-tab.text--blue 
+                +button({
+                    tag: 'link',
+                    text: 'Заказать версию',
+                    color: 'blue-general',
+                })
         .prices__table-td.prices__table-td--w50
             .prices__table-price.font-number.text--blue 3 500 руб
-            .prices__table-price.font-tab.text--blue Заказать версию
+            .prices__table-price.font-tab.text--blue 
+                +button({
+                    tag: 'link',
+                    text: 'Заказать версию',
+                    color: 'blue-general',
+                })
 
 
 

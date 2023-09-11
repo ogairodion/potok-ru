@@ -1,6 +1,7 @@
 include ../../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../../blocks/components/button/button.pug
 
-section.main-top
+section.main-top.main-top-program
     .l-default 
         +breadcrumbs([
             { href: '/', text: 'Главная' },
@@ -10,4 +11,10 @@ section.main-top
         .main-top__img 
             +webp(['main-top/1'], 'jpg')
         .main-top__subtitle.font-accent Программа для расчета систем отопления, охлаждения теплоснабжения калориферов и оборудования. <span>Может поставлятся как в составе других программ комплекса TEPLOOV, так и отдельно от программ комплекса</span>
+        +button({
+            tag: 'link',
+            text: 'Перейти к покупке',
+            color: 'blue-general',
+            icon_right: 'arrow-right',
+        })
         
