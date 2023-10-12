@@ -1,0 +1,25 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+mixin form-login(element)
+    .form.form-login
+        .form__icon
+            +svgMono('card-program')
+        .form__title= element.title
+        .form__subtitle!= element.subtitle
+        - if (element.inputs.length)
+            .form__inputs
+                each input in element.inputs
+                    +input({
+                        type: input.type,
+                        placeholder: input.placeholder,
+                        required_text: input.placeholder,
+                    })
+                a.form__link(href="") Забыл пароль
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Войти в кабинет',
+                    color: 'blue-general',
+                })

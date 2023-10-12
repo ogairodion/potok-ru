@@ -31,3 +31,5 @@ PageList:
     ready: 100
   - file: popups.html
     ready: 100
+  - file: lk-login.html
+    ready: 1

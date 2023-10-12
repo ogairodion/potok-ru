@@ -37,6 +37,14 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
+
+    &--login {
+        background: $blue;
+
+        section {
+            padding: 32px 0;
+        }
+    }
 }
 
 .text--blue {
