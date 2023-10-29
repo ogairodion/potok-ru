@@ -1,0 +1,52 @@
+.lk-menu {
+    margin-top: 20px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: $blue_general;
+        border-radius: 8px;
+        border: 1px solid $blue_general;
+        padding: 20px;
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &-notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            font-size: 14px;
+            line-height: 1;
+            color: $white;
+            background: $blue_general;
+        }
+
+        &.active {
+            color: $white;
+            background: $blue_general;
+        }
+    }
+}
