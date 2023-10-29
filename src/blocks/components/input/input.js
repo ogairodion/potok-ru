@@ -6,6 +6,7 @@ import validate from 'jquery-validation';
 const inputs = document.querySelectorAll('.input');
 const GLOBAL_LANG = $('html').attr('lang') || 'ru';
 const phones = document.querySelectorAll('.phone');
+const inputCode = document.querySelectorAll('.input.code');
 
 if (phones.length) {
     Inputmask({
@@ -20,7 +21,7 @@ if (inputs.length) {
         const trigger = inputEl ?? textareaEl;
         const labelPlaceholder = input.querySelector('.input__label');
 
-        if (trigger) {
+        if (trigger && !input.classList.contains('code')) {
             trigger.addEventListener('focus', (e) => {
                 e.target.classList.add('on-focus');
                 labelPlaceholder.classList.remove('hidden');
@@ -76,6 +77,7 @@ $.validator.addMethod('valphone', function(value, element) {
 
 function getValidClasses(element) {
     let parent = $(element).parent();
+
     if ($(element).hasClass('valid')) {
         parent.addClass('valid-wrapper').removeClass('error-wrapper');
     } else {
@@ -117,3 +119,31 @@ $('form').each(function() {
         },
     });
 });
+
+if (inputCode.length) {
+    inputCode.forEach((item, index) => {
+        const input = item.querySelector('input');
+        const inputsLength = inputCode.length;
+        const pattern = /^\d+\.?\d*$/;
+
+        input.addEventListener('input', (event) => {
+            if (event.target.value.length > 1) {
+                event.target.value = event.data;
+            }
+        });
+
+        input.addEventListener('keyup', (event) => {
+            if (index >= 0 && index < inputsLength - 1 && pattern.test(event.key)) {
+                const inputNext = inputCode[index + 1].querySelector('input');
+
+                inputNext.focus();
+            }
+
+            if (index > 0 && event.code === 'Backspace') {
+                const inputPrev = inputCode[index - 1].querySelector('input');
+
+                inputPrev.focus();
+            }
+        });
+    });
+}

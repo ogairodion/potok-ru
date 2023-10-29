@@ -1,4 +1,6 @@
 mixin button(element)
+    - var className = element.className ? element.className : '';
+    - var parentClass = element.parentClass ? element.parentClass : '';
     - var color = element.color ? 'button-' + element.color : '';
     - var type = element.type ? 'button-' + element.type : '';
     - var size = element.size ? 'button-' + element.size : '';
@@ -9,11 +11,11 @@ mixin button(element)
     - var close_popup_class = element.close_popup ? 'button-popup-close' : ''; 
     
     - if (element.typeBtn !== 'arrow')
-        .button
+        .button(class=parentClass)
             - if (element.label)
                 label.button__label= element.label
             - if (element.tag === 'link')
-                a.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled href=element.href data-fancybox=popup)
+                a.button__container(class=[color, type, size, font_size, font_weight, className] disabled=element.disabled href=element.href data-fancybox=popup)
                     - if (element.icon_left)
                         .button__icon
                             i(data-feather=element.icon_left)
@@ -27,7 +29,7 @@ mixin button(element)
                             +svgMono(element.icon)
             - else
                 - if (element.close_popup)
-                    button.button__container(class=[color, type, size, font_size, font_weight, close_popup_class] data-fancybox-close disabled=element.disabled type=element.type)
+                    button.button__container(class=[color, type, size, font_size, font_weight, close_popup_class, className] data-fancybox-close disabled=element.disabled type=element.type)
                         - if (element.icon_left)
                             .button__icon
                                 i(data-feather=element.icon_left)
@@ -40,7 +42,7 @@ mixin button(element)
                             .button__icon
                                 +svgMono(element.icon)
                 - else
-                    button.button__container(class=[color, type, size, font_size, font_weight] disabled=element.disabled type=element.type)
+                    button.button__container(class=[color, type, size, font_size, font_weight, className] disabled=element.disabled type=element.type)
                         - if (element.icon_left)
                             .button__icon
                                 i(data-feather=element.icon_left)
@@ -53,6 +55,6 @@ mixin button(element)
                             .button__icon
                                 +svgMono(element.icon)
     - else 
-        button.button(class='button-' + element.typeBtn class='button-' + element.typeBtn + '-' + element.color type=element.type)
+        button.button(class='button-' + element.typeBtn class='button-' + element.typeBtn + '-' + element.color type=element.type class=className)
             .button__icon   
                 i(data-feather=element.icon)

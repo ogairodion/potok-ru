@@ -143,4 +143,193 @@
             }
         }
     }
+
+    &-registration {
+        background: $white;
+        padding: 40px 32px;
+        margin-right: 80px;
+
+        .form {
+            &__title {
+                font-size: 32px;
+                line-height: 120%;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            &__subtitle {
+                font-size: 17px;
+                line-height: 120%;
+                text-align: center;
+                margin-bottom: 16px;
+
+                a {
+                    color: $blue_dark;
+                }
+            }
+
+            &__count {
+                color: #161616BF;
+                text-align: center;
+                margin-bottom: 18px;
+            }
+
+            &__icon {
+                display: block;
+                font-size: 35px;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            &__inputs {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                margin-bottom: 16px;
+
+                .input {
+                    max-width: 100%;
+                }
+            }
+
+            &__link {
+                color: $blue_dark;
+            }
+
+            &__btns {
+                display: flex;
+                gap: 8px;
+
+                &--steps {
+                    margin-top: 50px;
+                }
+
+                &--code {
+                    margin-top: 100px;
+                }
+            }
+
+            &__capcha {
+                display: flex;
+                align-items: center;
+                margin-top: 51px;
+                margin-bottom: 18px;
+
+                &-text {
+                    font-size: 31px;
+                    line-height: 31px;
+                    color: #16161699;
+                    margin-right: 24px;
+                }
+
+                &-refresh {
+                    font-size: 32px;
+                    cursor: pointer;
+                }
+            }
+
+            &__checkboxes {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            &__code {
+                .form {
+                    &__subtitle {
+                        margin-bottom: 54px;
+                    }
+                }
+
+                &-inputs {
+                    display: flex;
+                    justify-content: center;
+                    gap: 22px;
+                    margin-bottom: 18px;
+
+                    .input {
+                        max-width: 96px;
+
+                        input {
+                            box-shadow: 6px 6px 30px 0px #4866AF1A;
+                            border: none;
+                            min-height: 130px;
+                            font-size: 48px;
+                            font-weight: 600;
+                            text-align: center;
+
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                &-message {
+                    font-size: 17px;
+                    line-height: 27px;
+
+                    a {
+                        display: block;
+                        color: $blue-general;
+                    }
+                }
+
+                .button {
+                    max-width: 100%;
+                    margin-top: 102px;
+                }
+            }
+
+            &__thanks {
+                &-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 84px;
+                    margin-top: 52px;
+                }
+
+                .button {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .button {
+            flex: 1 1 auto;
+
+            &-next-parent, &-code-parent {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            &--prev {
+                min-width: 80px;
+                max-width: 80px;
+                border: 1px solid #16161633;
+                padding: 0;
+
+                svg {
+                    stroke: none;
+                }
+    
+                &:hover {
+                    color: #fff;
+                    
+                    svg {
+                        fill: #fff;
+                    };
+                }
+            }
+        }
+    }
 }

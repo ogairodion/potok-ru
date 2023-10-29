@@ -21,6 +21,8 @@ module.exports = {
         main: "./src/js/index.js",
         prices: "./src/js/prices.js",
         order: "./src/js/order.js",
+        login: "./src/js/login.js",
+        registration: "./src/js/registration.js",
     },
 
     output: {

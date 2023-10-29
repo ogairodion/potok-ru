@@ -1,0 +1,60 @@
+-
+    const data = {
+        title: 'Регистрация',
+        subtitle: 'Заполните форму ниже.<br /> Если вы уже зарегистрированы, <a href="">войдите</a>',
+        steps: [
+            {
+                inputs: [
+                    {
+                        type: 'text',
+                        placeholder: 'Фамилия *',
+                    },
+                    {
+                        type: 'text',
+                        placeholder: 'Имя *',
+                    },
+                    {
+                        type: 'text',
+                        placeholder: 'Отчество ',
+                    },
+                    {
+                        type: 'phone',
+                        placeholder: '(+7) _ _ _  _ _ _  _ _  _ _  *',
+                    },
+                ],
+            },
+            {
+                inputs: [
+                    {
+                        type: 'email',
+                        placeholder: 'E-mail *',
+                    },
+                    {
+                        type: 'text',
+                        placeholder: 'Придумайте логин для входа в личный кабинет *',
+                    },
+                    {
+                        type: 'password',
+                        placeholder: 'Придумайте пароль для входа в личный кабинет * ',
+                    },
+                    {
+                        type: 'password',
+                        placeholder: 'Повторите пароль *',
+                    },
+                ],
+            },
+            {
+                code: 'PhY_0856',
+                inputs: [
+                    {
+                        type: 'text',
+                        placeholder: 'Введите цифры с картинки выше',
+                    },
+                ],
+                checkboxes: [
+                    { value: false, text: 'получить доступ к демоверсии всех программ' },
+                    { value: false, text: 'даю согласие на обработку персональных данных' },
+                ],
+            },
+        ],
+    }

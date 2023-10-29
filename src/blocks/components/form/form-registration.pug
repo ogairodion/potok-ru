@@ -1,0 +1,114 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+mixin form-registration(element)
+    form.form.form-registration
+        .form__wrapper
+            .form__icon
+                +svgMono('card-program')
+            .form__title= element.title
+            .form__subtitle!= element.subtitle
+            .form__count Шаг <span class="step-current">1</span> из <span class="step-all">3</span>
+            .form__steps
+                each step, index in element.steps
+                    .form__step
+                        - if (step.inputs.length)
+                            - if (index == element.steps.length - 1)
+                                .form__capcha
+                                    .form__capcha-text PhY_0856
+                                    .form__capcha-refresh     
+                                        +svgMono('refresh')
+                            .form__inputs
+                                each input in step.inputs
+                                    +input({
+                                        type: input.type,
+                                        placeholder: input.placeholder,
+                                        required_text: input.placeholder,
+                                    })
+                            - if (index == element.steps.length - 1)
+                                .form__checkboxes
+                                    +checkbox({
+                                        checked: true,
+                                        text: 'получить доступ к демоверсии всех программ',
+                                        value: 'получить доступ к демоверсии всех программ',
+                                    })
+                                    +checkbox({
+                                        checked: true,
+                                        text: 'даю согласие на обработку персональных данных',
+                                        value: 'даю согласие на обработку персональных данных',
+                                    })
+                        - if (index < element.steps.length - 1)
+                            .form__btns.form__btns--steps 
+                                +button({
+                                    type: '',
+                                    color: 'white',
+                                    className: 'button--prev',
+                                    icon: 'arrow-prev',
+                                })
+                                +button({
+                                    type: '',
+                                    text: `Перейти к шагу ${index + 1}`,
+                                    color: 'blue-general',
+                                    className: 'button--next',
+                                    parentClass: 'button-next-parent',
+                                    icon: 'arrow-next',
+                                })
+                        - else if (index == element.steps.length - 1)
+                            .form__btns.form__btns--code 
+                                +button({
+                                    type: '',
+                                    color: 'white',
+                                    className: 'button--prev',
+                                    icon: 'arrow-prev',
+                                })
+                                +button({
+                                    type: '',
+                                    text: 'Отправить данные для получения кода',
+                                    color: 'blue-general',
+                                    parentClass: 'button-code-parent',
+                                    className: 'button--code',
+                                    icon: 'arrow-next',
+                                })
+        .form__code.hidden
+            .form__title= element.title
+            .form__subtitle Мы отправили письмо с кодом  на адрес example@example.ru. Введите код в форму  
+            .form__code-inputs 
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })     
+            .form__code-message Не получили код? Через 30 секунд <a href="">запросить повторно</a>
+            .form__submit   
+                +button({
+                    type: 'submit',
+                    text: 'Подтвердить код',
+                    color: 'blue-general',
+                })
+        .form__thanks.hidden   
+            .form__icon
+                +svgMono('card-program')
+            .form__title Благодарим<br> за регистрацию!
+            .form__subtitle Вы зарегистрированы в статусе «Группа<br> доступ к демоверсии»
+            .form__thanks-img
+                img(src="img/icons/registration-thanks.svg", alt="") 
+            .form__submit   
+                +button({
+                    tag: 'link',
+                    text: 'Войти в личный кабинет',
+                    color: 'blue-general',
+                    href: '/lk-login.html',
+                })

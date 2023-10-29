@@ -33,3 +33,5 @@ PageList:
     ready: 100
   - file: lk-login.html
     ready: 1
+  - file: lk-login-message.html
+    ready: 1
