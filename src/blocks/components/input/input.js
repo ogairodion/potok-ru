@@ -24,16 +24,23 @@ if (inputs.length) {
         if (trigger && !input.classList.contains('code')) {
             trigger.addEventListener('focus', (e) => {
                 e.target.classList.add('on-focus');
-                labelPlaceholder.classList.remove('hidden');
+
+                if (labelPlaceholder) {
+                    labelPlaceholder.classList.remove('hidden');
+                }
             });
 
             trigger.addEventListener('blur', (e) => {
                 e.target.classList.remove('on-focus');
 
                 if (trigger.value !== '') {
-                    labelPlaceholder.classList.remove('hidden');
+                    if (labelPlaceholder) {
+                        labelPlaceholder.classList.remove('hidden');
+                    }
                 } else {
-                    labelPlaceholder.classList.add('hidden');
+                    if (labelPlaceholder) {
+                        labelPlaceholder.classList.add('hidden');
+                    }
                 }
             });
         }

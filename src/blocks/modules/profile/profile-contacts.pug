@@ -1,0 +1,36 @@
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.profile__wrapper
+    form.profile__form
+        .form
+            .profile__top
+                .profile__top-title Контакты
+                .profile__edit
+                    .profile__edit-icon
+                        i(data-feather="edit-2")
+                    .profile__edit-text Редактировать 
+            .profile__content.profile__contacts
+                .form__inputs
+                    .form__input
+                        label.form__input-label E-mail
+                        input(type="email" name="email" value="example@example")
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input
+                        label.form__input-label Мессенджер
+                        input(type="text" name="messenger" value="t.me/example_example_spb")
+                        span.remove 
+                            i(data-feather="x")
+                .form__checkboxes
+                    label.form__input-label Уведомления
+                    +checkbox({ checked: false, text: 'Не получать письма от других пользователей', })
+                    +checkbox({ checked: false, text: 'Отписаться от подписанных новостей', })
+                    +checkbox({ checked: false, text: 'Получать уведомление об окончании срока поддержки', })
+
+        +button({
+            type: 'submit',
+            icon_left: 'save',
+            text: 'Сохранить изменения блока',
+            color: 'blue-general',
+        })

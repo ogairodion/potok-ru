@@ -23,6 +23,7 @@ module.exports = {
         order: "./src/js/order.js",
         login: "./src/js/login.js",
         registration: "./src/js/registration.js",
+        profile: "./src/js/profile.js",
     },
 
     output: {

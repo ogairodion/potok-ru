@@ -111,5 +111,59 @@
                 margin-top: 32px;
             }
         }
+
+        &__capcha {
+            display: flex;
+            align-items: center;
+
+            &-text {
+                font-size: 31px;
+                line-height: 31px;
+                color: #16161699;
+                margin-right: 24px;
+            }
+
+            &-refresh {
+                font-size: 32px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-change {
+        &-password, &-ip, &-code {
+            max-width: 600px !important;
+            padding: 32px 40px !important;
+
+            .button {
+                margin-top: 124px;
+            }
+
+            .form {
+                margin-top: 0;
+
+                &__caption {
+                    max-width: 380px;
+                    text-align: center;
+                    margin: 0 auto; 
+                    margin-bottom: 92px;
+                }
+            }
+
+            .popup {
+                &__title {
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .button {
+                max-width: 100%;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

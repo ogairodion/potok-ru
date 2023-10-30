@@ -1,0 +1,23 @@
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.profile__wrapper
+    form.profile__form.profile__access
+        .form
+            .profile__top
+                .profile__top-title Доступ к демоверсии
+                .profile__edit
+                    .profile__edit-icon
+                        i(data-feather="edit-2")
+                    .profile__edit-text Редактировать 
+            .profile__content
+                .form__checkboxes
+                    label.form__input-label Обращаем внимание, что после подтверждения запроса на доступ к демоверсии, вы сможете вернуться в группу «Гости» автоматически только через две недели 
+                    +checkbox({ checked: false, text: 'Получать доступ к демоверсии', })
+                    a(href="#") Подтвердить запрос 
+        +button({
+            type: 'submit',
+            icon_left: 'save',
+            text: 'Сохранить изменения блока',
+            color: 'blue-general',
+        })

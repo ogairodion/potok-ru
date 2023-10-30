@@ -1,0 +1,65 @@
+include ../../../blocks/components/button/button.pug
+
+h1.profile__title.title-lk-h1 Мой профиль
+.profile__wrapper
+    form.profile__form
+        .form
+            .profile__top
+                .profile__top-title Основная информация
+                .profile__edit
+                    .profile__edit-icon
+                        i(data-feather="edit-2")
+                    .profile__edit-text Редактировать 
+            .profile__content
+                .form__inputs
+                    .form__input
+                        label.form__input-label ФИО
+                        input(type="text" name="name" value="Аркадьев Иван Петрович")
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input
+                        label.form__input-label Место жительства
+                        input(type="text" name="city" value="город Санкт-Петербург")
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input
+                        label.form__input-label Пользователь
+                        input(type="text" name="user" value="Arkasha_1972")
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input
+                        label.form__input-label Организация
+                        input(type="text" name="organization" value="ООО Вентиляционные системы")
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input.form__input-not-change
+                        label.form__input-label Пароль
+                        input(type="password" name="password" value="11111")
+                        a(href="#popup-change-password" data-fancybox) Изменить пароль 
+                    .form__textarea
+                        label.form__textarea-label О себе
+                        textarea(type="text" name="about" value="")
+                        .form__textarea-value <span class="value-empty">Информация отсутствует</span>
+                        span.remove 
+                            i(data-feather="x")
+                    .form__input.form__input-not-change
+                        label.form__input-label Блокировка по IP 
+                        input(type="text" name="ip" value="Ваш текущий IP: 178.66.118.77")
+                        a(href="#popup-change-ip" data-fancybox) Изменить IP
+                        .message--danger Внимание! Будьте бдительны при изменении данной настройки. Доступ к Вашему аккаунту будет доступен только с того IP-адреса или подсети, который Вы укажете. Вы можете указать несколько IP-адресов, по одному адресу в каждой строке. Пример: 192.48.25.71 или 129.42.*.* 
+                    .form__input.form__input-img
+                        label.form__input-label Изображение
+                        .lk-header__account-wrapper
+                            .lk-header__account-img
+                                .lk-header__account-abbr АК
+                                +webp(['lk/avatar'], 'jpg')
+                            .lk-header__account-upload
+                                i(data-feather="plus")
+                                input(type="file" name="photo" value="")
+                        .form__input-remove Удалить изображение
+        +button({
+            type: 'submit',
+            icon_left: 'save',
+            text: 'Сохранить изменения блока',
+            color: 'blue-general',
+        })
