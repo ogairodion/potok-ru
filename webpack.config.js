@@ -24,6 +24,8 @@ module.exports = {
         login: "./src/js/login.js",
         registration: "./src/js/registration.js",
         profile: "./src/js/profile.js",
+        distributives: "./src/js/distributives.js",
+        history: "./src/js/history.js",
     },
 
     output: {

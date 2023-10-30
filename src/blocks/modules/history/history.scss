@@ -1,0 +1,57 @@
+.history {
+    &__table {
+        border-radius: 8px;
+        border: 1px solid #CFDDEB;
+        margin-top: 20px;
+    
+        td {
+            padding: 32px;
+            border-bottom: 1px solid #CFDDEB;
+
+            &:first-child {
+                border-right: 1px solid #CFDDEB;
+            }
+        }
+
+        thead {
+            td {
+                font-size: 13px;
+                line-height: 19px;
+                text-transform: uppercase;
+                color: #16161699;
+            }
+        }
+
+        tbody {
+            td {
+                min-width: 206px;
+                font-size: 17px;
+                line-height: 27px;
+                padding: 24px 32px;
+                border-bottom: 1px solid #CFDDEB;
+
+                &:nth-child(2) {
+                    a {
+                        display: block;
+                        white-space: nowrap;
+                        color: $blue_general;
+    
+                        &:not(:last-child) {
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: $blue_general;
+        cursor: pointer;
+        margin-top: 44px;
+    }
+}

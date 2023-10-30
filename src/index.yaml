@@ -41,3 +41,5 @@ PageList:
     ready: 1
   - file: lk-distributives.html
     ready: 1
+  - file: lk-history.html
+    ready: 1
