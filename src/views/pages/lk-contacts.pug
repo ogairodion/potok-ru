@@ -1,0 +1,19 @@
+extends ../layouts/lk
+include ../helpers/_mixins-default
+include ../helpers/_mixins-custom
+
+block variables
+  - const title = ""
+
+block content
+  include ../../blocks/modules/header/header.pug
+  main.main
+    include ../../blocks/components/lk-header/lk-header.pug
+    include ../../blocks/components/lk-menu/lk-menu.pug
+    include ../../blocks/modules/messages/messages.pug
+  include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")
+  script(defer src="js/messages.js")

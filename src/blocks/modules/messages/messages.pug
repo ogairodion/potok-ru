@@ -1,0 +1,16 @@
+section.messages
+    .l-default 
+        h1.messages__title.title-lk-h1 История счетов
+        .messages__top
+            .messages__tabs
+                .messages__tab Входящие  сообщения
+                .messages__tab Исходящие сообщения
+                .messages__tab Архив
+            a.messages__popup(href="" data-fancybox)
+                .messages__popup-icon
+                    i(data-feather="mail")
+                .messages__popup-text Написать сообщение
+        include messages-incoming
+        include messages-outcoming
+        include messages-archive
+                    

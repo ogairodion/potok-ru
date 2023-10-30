@@ -43,3 +43,5 @@ PageList:
     ready: 1
   - file: lk-history.html
     ready: 1
+  - file: lk-contacts.html
+    ready: 1

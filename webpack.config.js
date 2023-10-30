@@ -26,6 +26,7 @@ module.exports = {
         profile: "./src/js/profile.js",
         distributives: "./src/js/distributives.js",
         history: "./src/js/history.js",
+        messages: "./src/js/messages.js",
     },
 
     output: {
