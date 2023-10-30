@@ -1,0 +1,13 @@
+include ../.././components/button/button.pug
+
+.popup.popup-thanks#popup-attention
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Обратите внимание
+        .popup__description.font-p-3 Срок окончания доступа к технической поддержке – 14 августа 2024 года. Мы уведомим вас об окончании обслуживания за 30 дней до окончания срока, после чего вы сможете продлить срок обслуживания или перейти в «Группу гости»  – в этом случае доступ к дистрибутивам программ будет ограничен.
+        +button({
+            text: 'Все понятно',
+            color: 'white',
+            close_popup: 'data-fancybox-close',
+        }) 

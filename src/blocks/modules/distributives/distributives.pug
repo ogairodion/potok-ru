@@ -1,0 +1,35 @@
+include ../.././components/card/card-document.pug
+include ../.././components/button/button.pug
+include data.pug
+
+section.distributives
+    .l-default 
+        h1.distributives__title.title-lk-h1 Загрузка дистрибутивов ПО
+        .message 
+            .message-icon
+                i(data-feather="info")
+            .message-text Срок окончания доступа к технической поддержке: 14 августа 2024 года
+        .distributives__content
+            .distributives__items
+                each certificate in certificates
+                    +card-document({
+                        title: certificate.title,
+                        name: certificate.name,
+                        weight: certificate.weight,
+                        format: certificate.format,
+                        href: certificate.href,
+                        popup: certificate.popup,
+                    })
+            .distributives__btns    
+                +button({
+                    text: 'Загрузить весь пакет',
+                    icon_right: 'download-cloud',
+                    color: 'blue-general',
+                })
+
+                +button({
+                    text: 'Инструкция пользования программами',
+                    icon_right: 'download-cloud',
+                    color: 'white',
+                })
+        

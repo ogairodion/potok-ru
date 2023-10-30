@@ -1,0 +1,43 @@
+.distributives {
+    &__content {
+        border-radius: 8px;
+        border: 1px solid #CFDDEB;
+        padding: 24px;
+        margin-top: 20px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .card-document {
+        width: calc(50% - 24px);
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .button {
+        &-white {
+            color: $blue_general;
+
+            svg {
+                stroke: $blue_general;
+            }
+
+            &:hover {
+                color: $white;
+            
+                svg {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}

@@ -54,6 +54,30 @@ body {
     color: $blue_general;
 }
 
+.message {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+    border: 1px dashed $blue_general;
+    margin-top: 20px;
+    padding: 24px 32px;
+
+    a {
+        color: $blue_general;
+    }
+
+    &-icon {
+        font-size: 24px;
+        color: $blue_general;
+    }
+
+    &-text {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
 .text--blue {
     color: $blue_general;
 }
