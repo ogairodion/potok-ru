@@ -1,0 +1,19 @@
+include ../../../blocks/components/button/button.pug
+
+.lk-message.hidden
+    .lk-message__content
+        .l-default
+            .close 
+                i(data-feather="x")
+            .lk-message__title Внимание!
+            .lk-message__text Вы внесли, но не сохранили изменения в блоке «Основная информация»
+            .lk-message__btns 
+                +button({
+                    text: 'Сохранить изменения',
+                    color: 'blue-general',
+                })
+                +button({
+                    text: 'Оставить без изменений',
+                    color: '',
+                })
+    .shadow

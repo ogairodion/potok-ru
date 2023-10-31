@@ -32,16 +32,16 @@ PageList:
   - file: popups.html
     ready: 100
   - file: lk-login.html
-    ready: 1
+    ready: 100
   - file: lk-login-message.html
-    ready: 1
+    ready: 100
   - file: lk-registration.html
-    ready: 1
+    ready: 100
   - file: lk-profile.html
-    ready: 1
+    ready: 100
   - file: lk-distributives.html
-    ready: 1
+    ready: 100
   - file: lk-history.html
-    ready: 1
+    ready: 100
   - file: lk-contacts.html
-    ready: 1
+    ready: 100

@@ -1,0 +1,16 @@
+.lk-message.lk-message-exit.hidden
+    .lk-message__content
+        .l-default
+            .close 
+                i(data-feather="x")
+            .lk-message__title Выйти из личного кабинета?
+            .lk-message__btns 
+                +button({
+                    text: 'Остаться',
+                    color: 'blue-general',
+                })
+                +button({
+                    text: 'Выйти',
+                    color: '',
+                })
+    .shadow
