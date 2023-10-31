@@ -1,15 +1,25 @@
 .messages {
     &__top {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        flex-direction: column;
         margin-top: 36px;
+
+        @media (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+        }
     }
 
     &__tabs {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         gap: 32px;
+
+        @media (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+        }
     }
 
     &__tab {
@@ -26,6 +36,11 @@
         align-items: center;
         gap: 8px;
         color: $blue_general;
+        margin-top: 32px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
 
         &-icon {
             font-size: 24px;
@@ -41,18 +56,43 @@
         border: 1px solid #CFDDEB;
         margin-top: 36px;
         animation: show .4s ease;
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
     
         td {
             vertical-align: top;
             padding: 32px;
-            border-bottom: 1px solid #CFDDEB;
+
+            @media (min-width: 768px) {
+                border-bottom: 1px solid #CFDDEB;
+            }
 
             &:first-child {
                 border-right: 1px solid #CFDDEB;
             }
+
+            label {
+                display: block;
+                font-size: 13px;
+                line-height: 19px;
+                text-transform: uppercase;
+                color: #16161699;
+                margin-bottom: 8px;
+
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
         }
 
         thead {
+            @media (max-width: 767px) {
+                display: none;
+            }
+
             td {
                 font-size: 13px;
                 line-height: 19px;
@@ -67,10 +107,17 @@
                 font-size: 17px;
                 line-height: 27px;
                 padding: 24px 32px;
-                border-bottom: 1px solid #CFDDEB;
+
+                @media (min-width: 768px) {
+                    border-bottom: 1px solid #CFDDEB;
+                }
 
                 &:nth-child(2) {
                     min-width: 380px;
+
+                    @media (max-width: 767px) {
+                        min-width: 0;
+                    }
                 }
 
                 &:nth-child(3) {
@@ -94,6 +141,15 @@
             }
 
             tr {
+                @media (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #CFDDEB;
+                    }
+                }
+
                 &.not-read {
                     td {
                         background: $blue;
@@ -140,13 +196,17 @@
         &__items {
             position: absolute;
             top: calc(100% + 20px);
-            left: -90px;
+            left: 0;
             width: 180px;
             background: $white;
             border-radius: 8px;
             border: 1px solid #EFEFEF;
             box-shadow: 6px 6px 30px 0px #4866AF1A;
             padding: 20px 16px;
+
+            @media (min-width: 768px) {
+                left: -90px;
+            }
         }
 
         &__item {

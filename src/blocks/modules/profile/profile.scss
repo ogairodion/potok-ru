@@ -55,8 +55,11 @@
         
         &__inputs {
             display: grid;
-            grid-template-columns: repeat(2, 3fr);
             gap: 32px 64px;
+
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 3fr);
+            }
         }
 
         &__textarea {
@@ -293,8 +296,13 @@
     }
 
     &__contacts {
-        display: flex;
         gap: 16px;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
 
         .form {
             &__inputs {
@@ -303,7 +311,11 @@
             }
 
             &__inputs, &__checkboxes {
-                width: calc(50% - 16px);
+                width: 100%;
+
+                @media (min-width: 768px) {
+                    width: calc(50% - 16px);
+                }
             }
         }
     }

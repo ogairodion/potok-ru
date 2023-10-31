@@ -7,11 +7,14 @@
                     +webp(['lk/avatar'], 'jpg')
                 .lk-header__account-info
                     .lk-header__account-name Аркадьев Иван Петрович
-                    .lk-header__account-group
+                    .lk-header__account-group.info__wrapper
                         span «Группа гости»
                         span.lk-header__account-info
                             i(data-feather="info")
-            a.login__link(href="") 
+                        .info Контент подсказки
+            a.login__link.info__wrapper(href="") 
                 .login__link-text Выход
                 .login__link-icon 
                     +svgMono('logout')
+                .info Контент подсказки
+                

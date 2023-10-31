@@ -192,11 +192,19 @@
             &-inputs {
                 display: flex;
                 justify-content: center;
-                gap: 22px;
+                gap: 8px;
                 margin-bottom: 18px;
 
+                @media (min-width: 400px) {
+                    gap: 22px;
+                }
+
                 .input {
-                    max-width: 96px;
+                    max-width: 71px;
+
+                    @media (min-width: 768px) {
+                        max-width: 96px;
+                    }
 
                     input {
                         box-shadow: 6px 6px 30px 0px #4866AF1A;
@@ -205,6 +213,10 @@
                         font-size: 48px;
                         font-weight: 600;
                         text-align: center;
+
+                        @media (max-width: 767px) {
+                            padding: 0;
+                        }
 
                         &::-webkit-outer-spin-button,
                         &::-webkit-inner-spin-button {
@@ -300,9 +312,14 @@
 
             &__triggers {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
                 gap: 38px;
                 padding-top: 24px;
+
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    align-items: center;
+                }
             }
 
             &__trigger {
@@ -334,8 +351,11 @@
     }
 
     &-code, &-change {
-        width: 600px;
         padding: 32px 40px !important;
+
+        @media (min-width: 768px) {
+            width: 600px;
+        }
 
         .form {
             &__subtitle {

@@ -1,0 +1,28 @@
+.info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    width: 540px;
+    font-size: 17px;
+    line-height: 27px;
+    border-radius: 8px;
+    background: $white;
+    color: $black_general;
+    border: 1px solid #CFDDEB;
+    box-shadow: 6px 6px 30px 0px #4866AF1A;
+    padding: 24px;
+    display: none;
+
+    &__wrapper {
+        position: relative;
+
+        @media (min-width: 992px) {
+            &:hover {
+                .info {
+                    display: block;
+                }
+            }   
+        }
+    }
+}

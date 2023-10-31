@@ -1,5 +1,9 @@
 .lk-header {
-    margin-top: 48px;
+    margin-top: 34px;
+
+    @media (min-width: 600px) {
+        margin-top: 48px;
+    }
 
     &__wrapper {
         display: flex;
@@ -18,8 +22,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            width: 80px;
-            height: 80px;
+            min-width: 80px;
+            min-height: 80px;
             font-size: 24px;
             line-height: 1;
             text-transform: uppercase;
@@ -63,6 +67,11 @@
     }
 
     .login__link {
+        display: none;
         margin-top: 20px;
+        
+        @media (min-width: 768px) {
+            display: flex;
+        }
     }
 }
