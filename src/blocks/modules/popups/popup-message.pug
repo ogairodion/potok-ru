@@ -1,0 +1,57 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-message#popup-message
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 Ваше сообщение
+        .popup__description.font-p-3 Вы можете задать нам любой вопрос, связанный с пользованием программами пакетаTeploov, а также любой отзыв, касающийся деятельности компании. Будем благодарны вам за обратную связь и конструктивные предложения. Постараемся ответить вам в ближайшее время. 
+        form.form
+            .form__caption.font-p-1 Тема письма
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'theme',
+                    placeholder: 'Напишите о чем будет ваше письмо',
+                })
+            .form__caption.font-p-1 Текст письма
+            .form__message
+                +input({
+                    type: 'textarea',
+                    name: 'comment',
+                    reqiured: true,
+                    placeholder: 'Сообщение',
+                    max: '3000',
+                })
+            .form__upload 
+                .form__upload-trigger  
+                    .form__upload-icon
+                        i(data-feather="plus")
+                    .form__upload-input
+                        input(type="file" name="file")
+                .form__upload-texts
+                    .form__upload-title Прикрепить документ
+                    .form__upload-text JPG,PNG, PDF, DOC, EXCEL (не более 5 mb)
+            .form__caption.font-p-1 Введите символы с картинки*
+            .form__capcha
+                .form__capcha-text PhY_0856
+                .form__capcha-refresh     
+                    +svgMono('refresh')
+            .form__inputs
+                +input({
+                    type: 'text',
+                    name: 'capcha',
+                    placeholder: '',
+                })
+            .form__privacy
+                .form__privacy-checkbox     
+                    +checkbox({ checked: true, text: 'даю согласие на обработку персональных данных', })
+            .form__submit 
+                +button({
+                    type: 'submit',
+                    text: 'Отправить сообщение',
+                    color: 'white',
+                    font_size: 'tabs font-b'
+                })

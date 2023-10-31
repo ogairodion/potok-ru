@@ -2,31 +2,30 @@ include ../../../blocks/components/input/input.pug
 include ../../../blocks/components/button/button.pug
 include ../../../blocks/components/checkbox/checkbox.pug
 
-.popup.popup-change#popup-change-ip
+.popup.popup-change-ip-capcha#popup-change-ip-capcha
     .popup__content
         .popup__icon 
             +svgMono('card-program')
         .popup__title.font-h2 Изменение IP
-        .popup__subtitle.font-p-1 Ваш текущий IP: 178.66.118.77 Вы можете указать несколько IP-адресов, по одному адресу в каждой строке
         form.form
+            .form__caption.font-p-1 Введите телефон или e-mail, указанные при регистрации. 
             .form__inputs
                 +input({
                     type: 'text',
                     name: '',
                     reqiured: true,
-                    placeholder: 'Новый IP адрес *',
+                    placeholder: 'Введите номер телефона или e-mail *',
                 })
+
+                .form__capcha
+                    .form__capcha-text PhY_0856
+                    .form__capcha-refresh     
+                        +svgMono('refresh')
+
                 +input({
                     type: 'text',
-                    name: '',
-                    reqiured: true,
-                    placeholder: 'Новый IP адрес *',
-                })
-                +input({
-                    type: 'text',
-                    name: '',
-                    reqiured: true,
-                    placeholder: 'Новый IP адрес *',
+                    name: 'email',
+                    placeholder: 'Введите цифры с картинки выше',
                 })
 
             .form__submit 

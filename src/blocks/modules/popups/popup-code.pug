@@ -1,0 +1,35 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-code#popup-code
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .form__code
+            .form__title Изменение пароля
+            .form__subtitle Мы отправили письмо с кодом  на адрес <a href="">example@example.ru.</a> Введите код в форму  
+            .form__code-inputs 
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })  
+                +input({
+                    type: 'number',
+                    class: 'code',
+                })     
+            .form__code-message Не получили код? Через 30 секунд <a href="">запросить повторно</a>
+            .form__submit   
+                +button({
+                    type: 'submit',
+                    text: 'Подтвердить код',
+                    color: 'blue-general',
+                })

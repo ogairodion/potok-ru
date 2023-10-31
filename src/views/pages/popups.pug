@@ -52,14 +52,35 @@ block content
         .popup-example  
           a.font-p-1(href="https://www.youtube.com/watch?v=XAvtrZISYrY" data-fancybox) Пример видео в попапе
         .popup-example  
+          a.font-p-1(href="#popup-change-password-capcha" data-fancybox) Пример попапа по смене пароля (capcha)
+          include ../../blocks/modules/popups/popup-change-password-capcha.pug
+        .popup-example  
+          a.font-p-1(href="#popup-change-ip-capcha" data-fancybox) Пример попапа по смене IP (capcha)
+          include ../../blocks/modules/popups/popup-change-ip-capcha.pug
+        .popup-example
           a.font-p-1(href="#popup-change-password" data-fancybox) Пример попапа по смене пароля
           include ../../blocks/modules/popups/popup-change-password.pug
-        .popup-example  
-          a.font-p-1(href="#popup-change-ip" data-fancybox) Пример попапа по смене IP
+        .popup-example
+          a.font-p-1(href="#popup-change-ip" data-fancybox) Пример попапа по смене ip
           include ../../blocks/modules/popups/popup-change-ip.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks-change" data-fancybox) Пример попапа по Спасибо после смены пароля или ip
+          include ../../blocks/modules/popups/popup-thanks-change.pug
+        .popup-example
+          a.font-p-1(href="#popup-code" data-fancybox) Пример попапа для ввода кода
+          include ../../blocks/modules/popups/popup-code.pug
         .popup-example
           a.font-p-1(href="#popup-attention" data-fancybox) Пример попапа Обратите внимание
           include ../../blocks/modules/popups/popup-attention.pug
+        .popup-example
+          a.font-p-1(href="#popup-messages" data-fancybox) Пример попапа Читать
+          include ../../blocks/modules/popups/popup-messages.pug  
+        .popup-example
+          a.font-p-1(href="#popup-message" data-fancybox) Пример попапа Ваше сообщение
+          include ../../blocks/modules/popups/popup-message.pug
+        .popup-example
+          a.font-p-1(href="#popup-thanks-message" data-fancybox) Пример попапа спасибо за Ваше сообщение
+          include ../../blocks/modules/popups/popup-thanks-message.pug
 
   include ../../blocks/modules/footer/footer.pug
 

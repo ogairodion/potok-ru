@@ -1,0 +1,18 @@
+include ../../../blocks/components/input/input.pug
+include ../../../blocks/components/button/button.pug
+include ../../../blocks/components/checkbox/checkbox.pug
+
+.popup.popup-change#popup-thanks-change
+    .popup__content
+        .popup__icon 
+            +svgMono('card-program')
+        .popup__title.font-h2 IP изменен
+        .popup__subtitle.font-p-1 Вы можете продолжить настройки данных вашего профиля. После изменения данных не забудьте сохранить изменения в блоке, нажав на кнопку «Сохранить изменения»
+        .popup__img         
+            img(src="img/icons/registration-thanks.svg", alt="")
+        .form__submit 
+            +button({
+                type: 'submit',
+                text: 'Отправить данные для получения кода',
+                color: 'blue-general',
+            })
