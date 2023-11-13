@@ -133,13 +133,11 @@ if (inputCode.length) {
         const inputsLength = inputCode.length;
         const pattern = /^\d+\.?\d*$/;
 
-        input.addEventListener('input', (event) => {
+        input.addEventListener('keyup', (event) => {
             if (event.target.value.length > 1) {
                 event.target.value = event.data;
             }
-        });
 
-        input.addEventListener('keyup', (event) => {
             if (index >= 0 && index < inputsLength - 1 && pattern.test(event.key)) {
                 const inputNext = inputCode[index + 1].querySelector('input');
 

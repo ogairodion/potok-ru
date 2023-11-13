@@ -5,11 +5,16 @@
     max-width: fit-content;
 
     label.error {
-        order: 1;
         font-size: 13px;
         line-height: 120%;
         color: $red;
-        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    &.code {
+        label.error {
+            display: none !important;
+        }
     }
 
     &__label {
@@ -34,7 +39,6 @@
     }
 
     input {
-        order: 2;
         min-height: 53px;
         border: 1px solid $grey_disabled;
         border-radius: 4px;
